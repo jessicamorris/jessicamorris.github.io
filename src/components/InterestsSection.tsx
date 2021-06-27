@@ -11,10 +11,6 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles, Theme } from "@material-ui/core/styles";
 
-// MUI Icons
-import GitHub from "@material-ui/icons/GitHub";
-import Instagram from "@material-ui/icons/Instagram";
-
 // My stuff
 import Interest, { interests } from "../models/interests";
 
@@ -22,21 +18,28 @@ const useStyles = makeStyles((theme: Theme) => ({
   root: {},
   buttons: {
     marginBottom: theme.spacing(5)
+  },
+  interest: {
+    marginBottom: theme.spacing(5)
   }
 }));
 
-interface InterestProps {
-  name: string;
-  description: string;
-}
+const InterestBox = (interest: Interest) => {
+  const classes = useStyles();
 
-const InterestBox = (props: InterestProps) => {
   return (
-    <div>
-      <Typography variant="h4">{props.name}</Typography>
-      <Typography paragraph>{props.description}</Typography>
-      <Button size="small" startIcon={<GitHub />}>
-        Code
+    <div className={classes.interest}>
+      <Typography variant="h4">{interest.name}</Typography>
+      <Typography paragraph>{interest.description}</Typography>
+      <Button
+        size="small"
+        variant="outlined"
+        startIcon={<interest.buttonIcon />}
+        onClick={() => {
+          window.open(interest.buttonLink, "_blank");
+        }}
+      >
+        {interest.buttonLabel}
       </Button>
     </div>
   );
@@ -65,14 +68,9 @@ export default function InterestsSection(): JSX.Element {
               </ButtonGroup>
             </div>
             <div>
-              {interests.map((interest: Interest) => {
-                return (
-                  <InterestBox
-                    name={interest.name}
-                    description={interest.description}
-                  />
-                );
-              })}
+              {interests.map((interest: Interest) => (
+                <InterestBox {...interest} />
+              ))}
             </div>
           </Grid>
         </Grid>

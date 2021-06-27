@@ -26,6 +26,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("xs")]: {
       textAlign: "left"
     }
+  },
+  toolbar: {
+    padding: theme.spacing(3, 0)
   }
 }));
 
@@ -36,7 +39,7 @@ export default function AppFooter(): JSX.Element {
   return (
     <AppBar position="static" color="primary" className={classes.root} elevation={0}>
       <Container>
-        <Toolbar>
+        <Toolbar className={classes.toolbar}>
           <Grid container spacing={2}>
             <Grid item xs={12} sm>
               <Typography variant="body1">© 2021 Jessica D. Morris</Typography>
