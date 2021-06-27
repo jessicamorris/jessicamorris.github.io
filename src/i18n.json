@@ -1,0 +1,60 @@
+{
+    "resources": {
+        "en": {
+            "translation": {
+                "Biography title": "Biography",
+                "Biography job title": "Software Systems Developer",
+                "Biography job employer": "Canadian Centre for Cyber Security",
+                "Biography content 1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat mi vitae augue scelerisque lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque placerat velit ornare scelerisque. Donec ultricies, massa nec vestibulum iaculis, risus risus dictum mi, a accumsan nisl eros vel nisi. Quisque elementum vel leo ultrices dictum. Nunc tristique tincidunt ligula quis bibendum. Aenean viverra ex ipsum, in placerat orci viverra et. Sed laoreet finibus felis, blandit rhoncus lorem cursus vulputate. Mauris eu sem pretium, pellentesque lorem vitae, tristique sapien. Phasellus id velit porta metus tempus cursus eu et augue. Phasellus a lectus id urna venenatis venenatis. Nunc sodales feugiat dolor, rhoncus vehicula neque tincidunt quis. Maecenas porttitor mattis luctus. Maecenas faucibus, elit in mollis sodales, enim est ornare enim, at euismod sapien eros tincidunt nunc. Vestibulum facilisis bibendum diam, ac eleifend lacus interdum sed. ",
+                "Biography content 2": "Morbi ullamcorper, odio in tempor ultrices, urna elit porta mi, sed placerat tortor felis vitae felis. Proin blandit nisi arcu, non dictum velit efficitur at. Integer hendrerit suscipit purus, vitae dignissim ligula vestibulum id. Duis eu interdum diam. Mauris tristique in ex lacinia elementum. Vestibulum ut volutpat elit, vel ornare nibh. Nam gravida nunc in lacinia tincidunt. Nunc dictum facilisis eros non tristique. Quisque at vehicula nunc. ",
+                "Biography content 3": "Vivamus nec nibh cursus, tincidunt velit in, gravida ligula. Vestibulum hendrerit sollicitudin lacinia. Sed ullamcorper tristique diam, non ullamcorper diam ornare a. Suspendisse potenti. Fusce nec placerat lorem. Donec in vestibulum justo. Mauris egestas velit lacus, nec tempor lectus tincidunt eget. Aenean porttitor felis consectetur, molestie nulla sit amet, lobortis velit. Sed vel pretium felis. Nullam imperdiet facilisis tempus. Sed vestibulum ut arcu quis pharetra. In vehicula pellentesque lobortis. Nunc placerat leo ac metus maximus bibendum. Vestibulum elit mauris, ornare vel mauris in, egestas ultricies felis. Phasellus molestie mauris sollicitudin metus interdum sollicitudin et sit amet ligula. Vestibulum non accumsan ante, vulputate pretium lorem. ",
+                "Biography interests title": "Interests",
+                "Biography interest 1": "Information Security",
+                "Biography interest 2": "Full-Stack Development",
+                "Biography interest 3": "Python",
+                "Biography education title": "Education",
+                "Biography education 1 degree": "B.Eng in Computer Systems, with High Distinction",
+                "Biography education 1 school": "Carleton University",
+                "Skills title": "Skills",
+                "Skills filter button 1": "All",
+                "Skills filter button 2": "Programming",
+                "Skills filter button 3": "Infrastructure",
+                "Skills filter button 4": "Soft Skills",
+                "Experience title": "Experience",
+                "Interests title": "Interests",
+                "Interests filter button 1": "All",
+                "Interests filter button 2": "Software",
+                "Interests filter button 3": "Hobbies",
+                "Interests filter button 4": "Causes",
+                "Contact title": "Contact",
+                "Contact field name": "Name",
+                "Contact field email": "Email",
+                "Contact field message": "Message",
+                "Contact field submit": "Submit",
+                "Footer hosting": "Hosted with ♥ on GitHub Pages"
+            }
+        },
+        "fr": {
+            "translation": {
+                "Biography job title": "Développeuse de Systèmes Logiciels",
+                "Biography job employer": "Centre canadien pour la cybersécurité",
+                "Biography title": "Biographie",
+                "Biography interests title": "Intérêts",
+                "Biography interest 1": "Sécurité Informatique",
+                "Biography interest 2": "Développement Full-Stack",
+                "Biography education title": "Éducation",
+                "Biography education 1 degree": "Diplômée en génie des systèmes informatiques, avec Haute Distinction",
+                "Biography education 1 school": "Université Carleton",
+                "Skills title": "Compétences",
+                "Experience title": "Expériences",
+                "Interests title": "Intérêts",
+                "Contact field name": "Nom",
+                "Contact field email": "Courriel",
+                "Contact field message": "Message",
+                "Contact field submit": "Soumettre",
+                "Footer hosting": "Hébergé avec ♥ sur GitHub Pages"
+            }
+        }
+    },
+    "fallbackLng": "en"
+}
