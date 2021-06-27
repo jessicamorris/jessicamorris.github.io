@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { createMuiTheme, Theme, ThemeProvider } from "@material-ui/core/styles";
 import { Overrides } from "@material-ui/core/styles/overrides";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import AppearanceContext from "../contexts/appearance";
 import Themes from "../models/themes";
@@ -43,7 +44,7 @@ export default function CustomThemeProvider({
   children
 }: CustomThemeProviderProps): JSX.Element {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(
-    window.matchMedia("(prefers-color-scheme: dark)").matches
+    useMediaQuery("(prefers-color-scheme: dark)")
   );
   const [themeIndex, setThemeIndex] = useState<number>(0);
 

@@ -78,48 +78,39 @@ const Profile = () => {
       </Typography>
       <div className={classes.socials}>
         <IconButton
-          color="secondary"
           component={Link}
           href="mailto:contact@jessicamorris.dev"
           target="_blank"
           rel="noopener"
         >
-          <EmailIcon />
+          <EmailIcon fontSize="large" color="secondary" />
         </IconButton>
         <IconButton
-          color="secondary"
           component={Link}
           href="https://github.com/jessicamorris"
           target="_blank"
           rel="noopener"
         >
-          <GitHubIcon />
+          <GitHubIcon fontSize="large" color="secondary" />
         </IconButton>
         <IconButton
-          color="secondary"
           component={Link}
           href="https://instagram.com/jess_ex_machina"
           target="_blank"
           rel="noopener"
         >
-          <InstagramIcon />
+          <InstagramIcon fontSize="large" color="secondary" />
         </IconButton>
         <IconButton
-          color="secondary"
           component={Link}
           href="https://twitter.com/jess_ex_machina"
           target="_blank"
           rel="noopener"
         >
-          <TwitterIcon />
+          <TwitterIcon fontSize="large" color="secondary" />
         </IconButton>
-        <IconButton
-          color="secondary"
-          component={Link}
-          href="/resume.pdf"
-          target="_blank"
-        >
-          <DeveloperBoardIcon />
+        <IconButton component={Link} href="/resume.pdf" target="_blank">
+          <DeveloperBoardIcon fontSize="large" color="secondary" />
         </IconButton>
       </div>
     </div>

@@ -1,5 +1,7 @@
 import { PaletteOptions } from "@material-ui/core/styles/createPalette";
 
+import { HyperfusePurple, HyperfuseMint } from "./colours";
+
 export interface AppTheme {
   name: string;
   palette: PaletteOptions;
@@ -10,10 +12,10 @@ const Themes: AppTheme[] = [
     name: "Hyperfuse",
     palette: {
       primary: {
-        main: "#85508f"
+        main: HyperfusePurple[700]
       },
       secondary: {
-        main: "#7ce4dc"
+        main: HyperfuseMint[200]
       }
     }
   },
