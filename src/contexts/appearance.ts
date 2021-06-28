@@ -8,7 +8,8 @@ export interface AppearanceContextProps {
 }
 
 export const AppearanceContext = createContext<AppearanceContextProps>({
-  isDarkMode: false,
+  isDarkMode:
+    window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches,
   setIsDarkMode: null,
   themeIndex: 0,
   setThemeIndex: null

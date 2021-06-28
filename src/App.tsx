@@ -7,7 +7,7 @@ import LanguageDetector from "i18next-browser-languagedetector";
 
 // Material UI
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { makeStyles, Theme } from "@material-ui/core/styles";
+import { Theme, makeStyles } from "@material-ui/core/styles";
 
 // My stuff
 import translations from "./i18n.json";
