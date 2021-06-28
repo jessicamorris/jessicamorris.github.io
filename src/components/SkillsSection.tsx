@@ -45,13 +45,13 @@ const useStyles = makeStyles((theme: Theme) => ({
   }
 }));
 
-interface SkillProps {
+interface SkillBoxProps {
   name: string;
   description: string;
   icon?: React.FC;
 }
 
-const SkillBox = (props: SkillProps) => {
+const SkillBox = (props: SkillBoxProps) => {
   const classes = useStyles();
 
   return (
@@ -106,7 +106,7 @@ export default function SkillsSection(): JSX.Element {
         <Grid container spacing={3}>
           {filteredSkills.map((skill, i) => {
             return (
-              <Grid item xs={6} sm={4} md={3} key={i}>
+              <Grid item xs={12} sm={6} md={4} lg={3} key={i}>
                 <SkillBox
                   name={skill.name}
                   description={skill.description}

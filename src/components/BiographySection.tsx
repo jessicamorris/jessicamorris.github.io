@@ -9,16 +9,23 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import IconButton from "@material-ui/core/IconButton";
 import Link from "@material-ui/core/Link";
+import List from "@material-ui/core/List";
+import ListItem, { ListItemProps } from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
 import Typography from "@material-ui/core/Typography";
-import { Theme, makeStyles } from "@material-ui/core/styles";
+import { Theme, makeStyles, withStyles } from "@material-ui/core/styles";
 
 // MUI Icons
 import DeveloperBoardIcon from "@material-ui/icons/DeveloperBoard";
 import EmailIcon from "@material-ui/icons/Email";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import InstagramIcon from "@material-ui/icons/Instagram";
+import KeyboardIcon from "@material-ui/icons/Keyboard";
+import LockIcon from "@material-ui/icons/Lock";
 import SchoolIcon from "@material-ui/icons/School";
 import TwitterIcon from "@material-ui/icons/Twitter";
+import ViewQuiltIcon from "@material-ui/icons/ViewQuilt";
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {},
@@ -45,20 +52,32 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontWeight: 300,
     marginTop: theme.spacing(1)
   },
-  socials: { marginTop: theme.spacing(3) },
-  educationList: {
+  socials: {
+    marginTop: theme.spacing(3)
+  },
+  iconList: {
     listStyle: "none",
     i: {
       fontWeight: 900
     }
   },
-  educationIcon: {
+  iconListBullet: {
     marginLeft: `-${theme.spacing(5)}px`,
     position: "absolute",
     textAlign: "center",
     lineHeight: "inherit"
-  }
+  },
+  iconListItem: { marginBottom: theme.spacing(3) }
 }));
+
+const StyledListItemIcon = withStyles(
+  {
+    root: {
+      margin: "1.5rem 0 0 0"
+    }
+  },
+  { withTheme: true }
+)(ListItemIcon);
 
 const Profile = () => {
   const classes = useStyles();
@@ -126,7 +145,9 @@ const Biography = () => {
       <Typography variant="h1" color="primary">
         {t("Biography title")}
       </Typography>
-      <Typography paragraph>{t("Biography content 1")}</Typography>
+      <Typography paragraph>
+        <Trans i18nKey="Biography content 1" components={{ a: <Link /> }} />
+      </Typography>
       <Typography paragraph>{t("Biography content 2")}</Typography>
       <Typography paragraph>{t("Biography content 3")}</Typography>
       <Grid container>
@@ -134,31 +155,44 @@ const Biography = () => {
           <Typography variant="h3" color="primary" style={{ fontWeight: "bold" }}>
             {t("Biography interests title")}
           </Typography>
-          <Typography variant="body2">
-            <ul>
-              <li>
-                <Trans i18nKey="Biography interest 1" components={{ a: <Link /> }} />
-              </li>
-              <li>{t("Biography interest 2")}</li>
-              <li>{t("Biography interest 3")}</li>
-            </ul>
-          </Typography>
+          <List dense disablePadding>
+            <ListItem>
+              <ListItemIcon>
+                <LockIcon />
+              </ListItemIcon>
+              <ListItemText>{t("Biography interest 1")}</ListItemText>
+            </ListItem>
+            <ListItem>
+              <ListItemIcon>
+                <ViewQuiltIcon />
+              </ListItemIcon>
+              <ListItemText>{t("Biography interest 2")}</ListItemText>
+            </ListItem>
+            <ListItem>
+              <ListItemIcon>
+                <KeyboardIcon />
+              </ListItemIcon>
+              <ListItemText>{t("Biography interest 3")}</ListItemText>
+            </ListItem>
+          </List>
         </Grid>
         <Grid item xs={12} sm={6}>
           <Typography variant="h3" color="primary" style={{ fontWeight: "bold" }}>
             {t("Biography education title")}
           </Typography>
-          <Typography variant="body2">
-            <ul className={classes.educationList}>
-              <li>
-                <SchoolIcon className={classes.educationIcon} />
+          <List dense disablePadding>
+            <ListItem alignItems="flex-start">
+              <StyledListItemIcon>
+                <SchoolIcon />
+              </StyledListItemIcon>
+              <ListItemText>
                 <div>
                   <p>{t("Biography education 1 degree")}</p>
                   <p>{t("Biography education 1 school")}, 2017</p>
                 </div>
-              </li>
-            </ul>
-          </Typography>
+              </ListItemText>
+            </ListItem>
+          </List>
         </Grid>
       </Grid>
     </div>
@@ -172,10 +206,10 @@ export default function BiographySection(): JSX.Element {
     <div className={classes.root}>
       <Container>
         <Grid container spacing={2}>
-          <Grid item sm={12} md={4}>
+          <Grid item xs={12} sm={12} md={4}>
             <Profile />
           </Grid>
-          <Grid item sm={12} md={8}>
+          <Grid item xs={12} sm={12} md={8}>
             <Biography />
           </Grid>
         </Grid>

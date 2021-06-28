@@ -24,11 +24,7 @@ import AppearanceContext from "../contexts/appearance";
 
 const StyledMenuButton = withStyles({
   root: {
-    "&:hover": {
-      //textDecoration: "underline",
-      //textDecorationThickness: "2px",
-      //textUnderlineOffset: "5px"
-    }
+    "&:hover": {}
   }
 })(Button);
 

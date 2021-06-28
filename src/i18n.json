@@ -31,7 +31,7 @@
                 "Contact field email": "Email",
                 "Contact field message": "Message",
                 "Contact field submit": "Submit",
-                "Footer hosting": "Hosted with ♥ on GitHub Pages"
+                "Footer hosting": "Hosted with ♥ on"
             }
         },
         "fr": {
@@ -40,10 +40,10 @@
                 "Biography job employer": "Centre canadien pour la cybersécurité",
                 "Biography title": "Biographie",
                 "Biography interests title": "Intérêts",
-                "Biography interest 1": "Sécurité Informatique",
-                "Biography interest 2": "Développement Full-Stack",
+                "Biography interest 1": "Sécurité informatique",
+                "Biography interest 2": "Développement full-stack",
                 "Biography education title": "Éducation",
-                "Biography education 1 degree": "Diplômée en génie des systèmes informatiques, avec Haute Distinction",
+                "Biography education 1 degree": "Diplômée en génie des systèmes informatiques, avec haute distinction",
                 "Biography education 1 school": "Université Carleton",
                 "Skills title": "Compétences",
                 "Experience title": "Expériences",
@@ -52,7 +52,7 @@
                 "Contact field email": "Courriel",
                 "Contact field message": "Message",
                 "Contact field submit": "Soumettre",
-                "Footer hosting": "Hébergé avec ♥ sur GitHub Pages"
+                "Footer hosting": "Hébergé avec ♥ sur"
             }
         }
     },
