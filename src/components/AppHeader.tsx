@@ -7,6 +7,7 @@ import { Link } from "react-scroll";
 import AppBar from "@material-ui/core/AppBar";
 import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
+import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import Collapse from "@material-ui/core/Collapse";
 import IconButton from "@material-ui/core/IconButton";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -141,27 +142,36 @@ export default function AppHeader(): JSX.Element {
   };
 
   return (
-    <AppBar position="fixed" className={classes.root} elevation={isDarkMode ? 0 : 3}>
-      <Toolbar>
+    <ClickAwayListener
+      onClickAway={() => {
+        if (isBarOpen) {
+          setIsBarOpen(false);
+        }
+      }}
+    >
+      <AppBar position="fixed" className={classes.root} elevation={isDarkMode ? 0 : 3}>
+        <Toolbar>
+          {useMediaQuery(theme.breakpoints.down("sm")) && (
+            <IconButton color="inherit" onClick={handleMenuButtonClick}>
+              <MenuIcon />
+            </IconButton>
+          )}
+          <Typography variant="h6" noWrap className={classes.name}>
+            Jessica D. Morris
+          </Typography>
+          {useMediaQuery(theme.breakpoints.up("md")) && <AppHeaderButtonGroup />}
+          <ThemePicker />
+          <LanguagePicker />
+        </Toolbar>
+
         {useMediaQuery(theme.breakpoints.down("sm")) && (
-          <IconButton color="inherit" onClick={handleMenuButtonClick}>
-            <MenuIcon />
-          </IconButton>
+          <Collapse in={isBarOpen}>
+            <Toolbar>
+              <AppHeaderButtonGroup />
+            </Toolbar>
+          </Collapse>
         )}
-        <Typography variant="h6" noWrap className={classes.name}>
-          Jessica D. Morris
-        </Typography>
-        {useMediaQuery(theme.breakpoints.up("md")) && <AppHeaderButtonGroup />}
-        <ThemePicker />
-        <LanguagePicker />
-      </Toolbar>
-      {useMediaQuery(theme.breakpoints.down("sm")) && (
-        <Collapse in={isBarOpen}>
-          <Toolbar>
-            <AppHeaderButtonGroup />
-          </Toolbar>
-        </Collapse>
-      )}
-    </AppBar>
+      </AppBar>
+    </ClickAwayListener>
   );
 }
