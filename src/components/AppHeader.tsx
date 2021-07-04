@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 
 // Scroller
-import { Link } from "react-scroll";
+import { Link, LinkProps } from "react-scroll";
 
 // Material UI
 import AppBar from "@material-ui/core/AppBar";
@@ -22,12 +22,6 @@ import MenuIcon from "@material-ui/icons/Menu";
 import ThemePicker from "./ThemePicker";
 import LanguagePicker from "./LanguagePicker";
 import AppearanceContext from "../contexts/appearance";
-
-const StyledMenuButton = withStyles({
-  root: {
-    "&:hover": {}
-  }
-})(Button);
 
 const StyledButtonGroup = withStyles({
   groupedTextHorizontal: {
@@ -59,10 +53,18 @@ const useStyles = makeStyles((theme: Theme) => ({
     [theme.breakpoints.down("sm")]: {
       textAlign: "center"
     }
+  },
+  button: {
+    color: "inherit",
+    justifyContent: theme.breakpoints.down("sm") ? "left" : "center"
+  },
+  active: {
+    fontWeight: "bold"
   }
 }));
 
 const AppHeaderButtonGroup = (): JSX.Element => {
+  const classes = useStyles();
   const theme: Theme = useTheme();
 
   return (
@@ -73,59 +75,69 @@ const AppHeaderButtonGroup = (): JSX.Element => {
       }
       disableRipple
     >
-      <Link
-        activeClass="active"
+      <Button
+        className={classes.button}
+        component={Link}
+        activeClass={classes.active}
         to="about"
         spy={true}
         smooth={true}
         duration={800}
         offset={-64}
       >
-        <StyledMenuButton color="inherit">Home</StyledMenuButton>
-      </Link>
-      <Link
-        activeClass="active"
+        Home
+      </Button>
+      <Button
+        className={classes.button}
+        component={Link}
+        activeClass={classes.active}
         to="skills"
         spy={true}
         smooth={true}
         duration={800}
         offset={-64}
       >
-        <Button color="inherit">Skills</Button>
-      </Link>
-      <Link
-        activeClass="active"
+        Skills
+      </Button>
+      <Button
+        className={classes.button}
+        component={Link}
+        activeClass={classes.active}
         to="experience"
         spy={true}
         smooth={true}
         duration={800}
         offset={-64}
       >
-        <Button color="inherit">Experience</Button>
-      </Link>
-      <Link
-        activeClass="active"
+        Experience
+      </Button>
+      <Button
+        className={classes.button}
+        component={Link}
+        activeClass={classes.active}
         to="interests"
         spy={true}
         smooth={true}
         duration={800}
         offset={-64}
       >
-        <Button color="inherit">Interests</Button>
-      </Link>
-      <Button color="inherit" href="/resume.pdf" target="_blank">
+        Interests
+      </Button>
+      <Button className={classes.button} href="/resume.pdf" target="_blank">
         Resume
       </Button>
-      <Link
-        activeClass="active"
+      <Button
+        className={classes.button}
+        component={Link}
+        activeClass={classes.active}
         to="contact"
         spy={true}
         smooth={true}
         duration={800}
         offset={-64}
       >
-        <Button color="inherit">Contact</Button>
-      </Link>
+        Contact
+      </Button>
     </StyledButtonGroup>
   );
 };
@@ -133,8 +145,7 @@ const AppHeaderButtonGroup = (): JSX.Element => {
 export default function AppHeader(): JSX.Element {
   const classes = useStyles();
   const theme: Theme = useTheme();
-  const { isDarkMode, setIsDarkMode, themeIndex, setThemeIndex } =
-    useContext(AppearanceContext);
+  const { isDarkMode } = useContext(AppearanceContext);
   const [isBarOpen, setIsBarOpen] = React.useState<boolean>(false);
 
   const handleMenuButtonClick = () => {

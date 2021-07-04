@@ -63,15 +63,19 @@ export default function ThemePicker(): JSX.Element {
     setOpen((prevOpen) => !prevOpen);
   };
 
-  const handleMenuClose = (event: any) => {
-    if (anchorRef.current && anchorRef.current.contains(event.target)) {
+  const handleMenuClose = (event: React.MouseEvent<Document | HTMLElement>) => {
+    const target = event.target as HTMLButtonElement;
+    if (anchorRef.current && anchorRef.current.contains(target)) {
       return;
     }
 
     setOpen(false);
   };
 
-  const handleThemeClicked = (themeIndex: number, event: any) => {
+  const handleThemeClicked = (
+    themeIndex: number,
+    event: React.MouseEvent<HTMLElement>
+  ) => {
     if (setThemeIndex !== null) {
       setThemeIndex(themeIndex);
     }
@@ -130,8 +134,10 @@ export default function ThemePicker(): JSX.Element {
                     return (
                       <MenuItem
                         tabIndex={0}
+                        key={index}
                         onClick={(e) => handleThemeClicked(index, e)}
                       >
+                        {index == themeIndex ? "> " : ""}
                         {theme.name}
                       </MenuItem>
                     );

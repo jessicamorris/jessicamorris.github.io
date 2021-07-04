@@ -24,7 +24,7 @@ const useStyles = makeStyles(() => ({
 
 export default function ThemePicker(): JSX.Element {
   const classes = useStyles();
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const [open, setOpen] = React.useState<boolean>(false);
   const anchorRef = React.useRef<HTMLButtonElement>(null);
 
@@ -40,7 +40,7 @@ export default function ThemePicker(): JSX.Element {
     setOpen(false);
   };
 
-  const handleClick = (language: string, event: any) => {
+  const handleClick = (language: string, event: React.MouseEvent<HTMLElement>) => {
     i18n.changeLanguage(language);
     handleClose(event);
   };
