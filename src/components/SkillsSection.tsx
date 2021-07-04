@@ -76,19 +76,6 @@ export default function SkillsSection(): JSX.Element {
     if (newCategory !== category) {
       setCategory(newCategory);
     }
-
-    console.log(
-      `Category: ${newCategory} and does [0][1][2] match? [${
-        category === SkillCategory.All || skills[0].category === category
-      }] [${category === SkillCategory.All || skills[1].category === category}] [${
-        category === SkillCategory.All || skills[2].category === category
-      }]`
-    );
-    console.log(
-      skills.filter((value: Skill) => {
-        category === SkillCategory.All || value.category === category;
-      })
-    );
   };
 
   return (
@@ -113,9 +100,10 @@ export default function SkillsSection(): JSX.Element {
         </div>
         <Grid container spacing={3}>
           {skills
-            .filter((skill: Skill) => {
-              category === SkillCategory.All || skill.category === category;
-            })
+            .filter(
+              (skill: Skill) =>
+                category === SkillCategory.All || skill.category === category
+            )
             .map((skill, i) => {
               return (
                 <Grid item xs={12} sm={6} md={4} lg={3} key={i}>

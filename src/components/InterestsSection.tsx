@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // i18n
 import { useTranslation } from "react-i18next";
@@ -12,7 +12,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles, Theme } from "@material-ui/core/styles";
 
 // My stuff
-import Interest, { interests } from "../models/interests";
+import Interest, { InterestCategory, interests } from "../models/interests";
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {},
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   }
 }));
 
-const InterestBox = (interest: Interest) => {
+const InterestBox = (interest: Interest): JSX.Element => {
   const classes = useStyles();
 
   return (
@@ -48,6 +48,13 @@ const InterestBox = (interest: Interest) => {
 export default function InterestsSection(): JSX.Element {
   const classes = useStyles();
   const { t } = useTranslation();
+  const [category, setCategory] = useState<InterestCategory>(InterestCategory.All);
+
+  const handleClick = (newCategory: InterestCategory): void => {
+    if (newCategory !== category) {
+      setCategory(newCategory);
+    }
+  };
 
   return (
     <div className={classes.root}>
@@ -61,16 +68,45 @@ export default function InterestsSection(): JSX.Element {
           <Grid item sm={12} md={8}>
             <div className={classes.buttons}>
               <ButtonGroup disableElevation color="secondary" variant="contained">
-                <Button>All</Button>
-                <Button>Software</Button>
-                <Button>Hobbies</Button>
-                <Button>Causes</Button>
+                <Button
+                  onClick={() => {
+                    handleClick(InterestCategory.All);
+                  }}
+                >
+                  All
+                </Button>
+                <Button
+                  onClick={() => {
+                    handleClick(InterestCategory.Software);
+                  }}
+                >
+                  Software
+                </Button>
+                <Button
+                  onClick={() => {
+                    handleClick(InterestCategory.Hobbies);
+                  }}
+                >
+                  Hobbies
+                </Button>
+                <Button
+                  onClick={() => {
+                    handleClick(InterestCategory.Causes);
+                  }}
+                >
+                  Causes
+                </Button>
               </ButtonGroup>
             </div>
             <div>
-              {interests.map((interest: Interest) => (
-                <InterestBox {...interest} />
-              ))}
+              {interests
+                .filter(
+                  (interest: Interest) =>
+                    category === InterestCategory.All || interest.category === category
+                )
+                .map((interest: Interest, index: number) => (
+                  <InterestBox {...interest} />
+                ))}
             </div>
           </Grid>
         </Grid>
