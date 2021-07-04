@@ -32,8 +32,9 @@ export default function ThemePicker(): JSX.Element {
     setOpen((prevOpen) => !prevOpen);
   };
 
-  const handleClose = (event: any) => {
-    if (anchorRef.current && anchorRef.current.contains(event.target)) {
+  const handleClose = (event: React.MouseEvent<Document | HTMLElement>) => {
+    const target = event.target as HTMLButtonElement;
+    if (anchorRef.current && anchorRef.current.contains(target)) {
       return;
     }
 
