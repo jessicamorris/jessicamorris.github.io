@@ -62,7 +62,7 @@ const ExperienceCard = (props: ExperienceCardProps) => {
           {props.startDate} - {props.endDate} <RoomIcon fontSize="small" />
           {props.location}
         </Typography>
-        <Typography variant="body1">{props.children}</Typography>
+        {props.children}
       </CardContent>
     </Card>
   );
@@ -95,7 +95,11 @@ export default function ExperienceSection(): JSX.Element {
                       location={experience.location}
                     >
                       <ul>
-                        <li>Responsibilities woooo</li>
+                        <li>
+                          <Typography variant="body2">
+                            Responsibilities woooo
+                          </Typography>
+                        </li>
                       </ul>
                     </ExperienceCard>
                   </div>

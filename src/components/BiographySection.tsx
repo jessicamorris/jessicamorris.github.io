@@ -137,13 +137,18 @@ const Biography = () => {
           <Typography variant="h3" color="primary" style={{ fontWeight: "bold" }}>
             {t("Biography interests title")}
           </Typography>
-          <Typography variant="body2">
-            <ul>
-              <li className={classes.spaciousLI}>{t("Biography interest 1")}</li>
-              <li className={classes.spaciousLI}>{t("Biography interest 2")}</li>
-              <li className={classes.spaciousLI}>{t("Biography interest 3")}</li>
-            </ul>
-          </Typography>
+
+          <ul>
+            <li className={classes.spaciousLI}>
+              <Typography variant="body2">{t("Biography interest 1")}</Typography>
+            </li>
+            <li className={classes.spaciousLI}>
+              <Typography variant="body2">{t("Biography interest 2")}</Typography>
+            </li>
+            <li className={classes.spaciousLI}>
+              <Typography variant="body2">{t("Biography interest 3")}</Typography>
+            </li>
+          </ul>
         </Grid>
         <Grid item xs={12} sm={6}>
           <Typography variant="h3" color="primary" style={{ fontWeight: "bold" }}>

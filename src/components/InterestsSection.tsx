@@ -105,7 +105,9 @@ export default function InterestsSection(): JSX.Element {
                     category === InterestCategory.All || interest.category === category
                 )
                 .map((interest: Interest, index: number) => (
-                  <InterestBox {...interest} />
+                  <div key={index}>
+                    <InterestBox {...interest} />
+                  </div>
                 ))}
             </div>
           </Grid>

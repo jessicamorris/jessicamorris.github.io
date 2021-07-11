@@ -6,7 +6,7 @@ import Twitter from "@material-ui/icons/Twitter";
 
 export enum InterestCategory {
   All = "All",
-  Cyber = "Cyber",
+  Software = "Software",
   Hobbies = "Hobbies",
   Causes = "Causes"
 }
@@ -24,7 +24,7 @@ export const interests: Interest[] = [
   {
     name: "Threat Hunting",
     description: "lorem ipsum",
-    category: InterestCategory.Cyber,
+    category: InterestCategory.Software,
     buttonLink: "",
     buttonIcon: GitHub,
     buttonLabel: "Code"
@@ -72,7 +72,7 @@ export const interests: Interest[] = [
   {
     name: "Hackathons",
     description: "lorem ipsum",
-    category: InterestCategory.Cyber,
+    category: InterestCategory.Software,
     buttonLink: "",
     buttonIcon: GitHub,
     buttonLabel: "Event Home Page"

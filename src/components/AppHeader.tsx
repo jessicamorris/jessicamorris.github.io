@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 
 // Scroller
-import { Link, LinkProps } from "react-scroll";
+import { Link } from "react-scroll";
 
 // Material UI
 import AppBar from "@material-ui/core/AppBar";
