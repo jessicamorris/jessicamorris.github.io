@@ -14,6 +14,7 @@ import { makeStyles, Theme } from "@material-ui/core/styles";
 
 // My stuff
 import Skill, { SkillCategory, skills } from "../models/skills";
+import { Link } from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {},
@@ -120,6 +121,20 @@ export default function SkillsSection(): JSX.Element {
                 </Grid>
               );
             })}
+          <Grid item xs={12}>
+            <Typography align="center" paragraph>
+              Icons sourced from{" "}
+              <Link
+                href="https://thenounproject.com"
+                target="_blank"
+                rel="noopener"
+                color="inherit"
+              >
+                The Noun Project
+              </Link>
+              .
+            </Typography>
+          </Grid>
         </Grid>
       </Container>
     </div>
