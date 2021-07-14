@@ -14,6 +14,9 @@ import {
   ScrumIcon
 } from "../components/Icons";
 
+// MUI
+import { SvgIcon } from "@material-ui/core";
+
 export enum SkillCategory {
   All = "All",
   Programming = "Programming",
@@ -25,25 +28,25 @@ export default interface Skill {
   name: string;
   description: string;
   category: SkillCategory;
-  icon?: React.FC;
+  icon: typeof SvgIcon;
 }
 
 export const skills: Skill[] = [
   {
     name: "Python",
-    description: "Flask/uWSGI, FastAPI, somthing else",
+    description: "pipenv, Flask, FastAPI, pytest",
     category: SkillCategory.Programming,
     icon: PythonIcon
   },
   {
     name: "Cloud Platforms",
-    description: "Azure, AWS",
+    description: "Microsoft Azure, AWS",
     category: SkillCategory.Infrastructure,
     icon: CloudIcon
   },
   {
     name: "React",
-    description: "lorem ipseum",
+    description: "Material UI, Redux",
     category: SkillCategory.Programming,
     icon: ReactLogo
   },
@@ -55,7 +58,7 @@ export const skills: Skill[] = [
   },
   {
     name: "Systems Administration",
-    description: "good at Linux",
+    description: "Scripting, troubleshooting, basic networking",
     category: SkillCategory.Infrastructure,
     icon: LinuxLogo
   },
@@ -67,7 +70,7 @@ export const skills: Skill[] = [
   },
   {
     name: "Documentation",
-    description: "Confluence, Swagger, ",
+    description: "Confluence, Draw.io, Swagger",
     category: SkillCategory.SoftSkills,
     icon: DocumentationIcon
   },
@@ -85,7 +88,7 @@ export const skills: Skill[] = [
   },
   {
     name: "nginx",
-    description: "lorem ipseum",
+    description: "Reverse proxy, API gateway, Lua scripting",
     category: SkillCategory.Infrastructure,
     icon: NginxIcon
   },

@@ -4,15 +4,13 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 // Material UI
+import Button from "@material-ui/core/Button";
+import ButtonGroup from "@material-ui/core/ButtonGroup";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
+import SvgIcon from "@material-ui/core/SvgIcon";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles, Theme } from "@material-ui/core/styles";
-
-// MUI Icons
-import ComputerIcon from "@material-ui/icons/Computer";
-import ButtonGroup from "@material-ui/core/ButtonGroup";
-import Button from "@material-ui/core/Button";
 
 // My stuff
 import Skill, { SkillCategory, skills } from "../models/skills";
@@ -42,13 +40,17 @@ const useStyles = makeStyles((theme: Theme) => ({
     flexDirection: "column",
     alignItems: "center",
     marginBottom: theme.spacing(5)
+  },
+  selected: {
+    fontWeight: "bold",
+    backgroundColor: theme.palette.secondary.dark
   }
 }));
 
 interface SkillBoxProps {
   name: string;
   description: string;
-  icon?: React.FC;
+  icon: typeof SvgIcon;
 }
 
 const SkillBox = (props: SkillBoxProps) => {
@@ -56,7 +58,7 @@ const SkillBox = (props: SkillBoxProps) => {
 
   return (
     <div className={classes.skill}>
-      {(props.icon && <props.icon />) || <ComputerIcon color="secondary" />}
+      <props.icon color="secondary" className={classes.featurette} />
       <Typography variant="h3" className={classes.name}>
         {props.name}
       </Typography>
@@ -86,16 +88,19 @@ export default function SkillsSection(): JSX.Element {
         </Typography>
         <div className={classes.buttons}>
           <ButtonGroup disableElevation color="secondary" variant="contained">
-            <Button onClick={() => handleClick(SkillCategory.All)}>All</Button>
-            <Button onClick={() => handleClick(SkillCategory.Programming)}>
-              Programming
-            </Button>
-            <Button onClick={() => handleClick(SkillCategory.Infrastructure)}>
-              Infrastructure
-            </Button>
-            <Button onClick={() => handleClick(SkillCategory.SoftSkills)}>
-              Soft Skills
-            </Button>
+            {Object.values(SkillCategory).map(
+              (skillCategory: SkillCategory, index: number) => {
+                return (
+                  <Button
+                    key={index}
+                    onClick={() => handleClick(skillCategory)}
+                    className={skillCategory === category ? "selected" : undefined}
+                  >
+                    {skillCategory.valueOf()}
+                  </Button>
+                );
+              }
+            )}
           </ButtonGroup>
         </div>
         <Grid container spacing={3}>
