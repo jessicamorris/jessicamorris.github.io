@@ -21,6 +21,10 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   interest: {
     marginBottom: theme.spacing(5)
+  },
+  selected: {
+    fontWeight: "bold",
+    backgroundColor: theme.palette.secondary.dark
   }
 }));
 
@@ -68,34 +72,21 @@ export default function InterestsSection(): JSX.Element {
           <Grid item sm={12} md={8}>
             <div className={classes.buttons}>
               <ButtonGroup disableElevation color="secondary" variant="contained">
-                <Button
-                  onClick={() => {
-                    handleClick(InterestCategory.All);
-                  }}
-                >
-                  All
-                </Button>
-                <Button
-                  onClick={() => {
-                    handleClick(InterestCategory.Software);
-                  }}
-                >
-                  Software
-                </Button>
-                <Button
-                  onClick={() => {
-                    handleClick(InterestCategory.Hobbies);
-                  }}
-                >
-                  Hobbies
-                </Button>
-                <Button
-                  onClick={() => {
-                    handleClick(InterestCategory.Causes);
-                  }}
-                >
-                  Causes
-                </Button>
+                {Object.values(InterestCategory).map(
+                  (interestCategory: InterestCategory, index: number) => {
+                    return (
+                      <Button
+                        key={index}
+                        onClick={() => handleClick(interestCategory)}
+                        className={
+                          interestCategory === category ? classes.selected : undefined
+                        }
+                      >
+                        {interestCategory.valueOf()}
+                      </Button>
+                    );
+                  }
+                )}
               </ButtonGroup>
             </div>
             <div>

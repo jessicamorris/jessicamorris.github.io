@@ -63,7 +63,7 @@ const SkillBox = (props: SkillBoxProps) => {
       <Typography variant="h3" className={classes.name}>
         {props.name}
       </Typography>
-      <Typography paragraph className={classes.details}>
+      <Typography className={classes.details} variant="body2">
         {props.description}
       </Typography>
     </div>
@@ -95,7 +95,9 @@ export default function SkillsSection(): JSX.Element {
                   <Button
                     key={index}
                     onClick={() => handleClick(skillCategory)}
-                    className={skillCategory === category ? "selected" : undefined}
+                    className={
+                      skillCategory === category ? classes.selected : undefined
+                    }
                   >
                     {skillCategory.valueOf()}
                   </Button>

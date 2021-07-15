@@ -34,7 +34,7 @@ export default interface Skill {
 export const skills: Skill[] = [
   {
     name: "Python",
-    description: "pipenv, Flask, FastAPI, pytest",
+    description: "pipenv, Flask, FastAPI, pytest, infrastructure automation",
     category: SkillCategory.Programming,
     icon: PythonIcon
   },
@@ -46,7 +46,7 @@ export const skills: Skill[] = [
   },
   {
     name: "React",
-    description: "Material UI, Redux",
+    description: "Material UI, Redux, a11y",
     category: SkillCategory.Programming,
     icon: ReactLogo
   },
@@ -64,7 +64,7 @@ export const skills: Skill[] = [
   },
   {
     name: "Scrum",
-    description: "lorem ipseum",
+    description: "Agile coaching, Sprint planning",
     category: SkillCategory.SoftSkills,
     icon: ScrumIcon
   },
@@ -82,7 +82,7 @@ export const skills: Skill[] = [
   },
   {
     name: "Java",
-    description: "lorem ipseum",
+    description: "Spring Boot, JUnit, Maven",
     category: SkillCategory.Programming,
     icon: JavaLogo
   },
@@ -94,13 +94,13 @@ export const skills: Skill[] = [
   },
   {
     name: "Angular",
-    description: "lorem ipseum",
+    description: "Materials, Protractor, REST and error handling services",
     category: SkillCategory.Programming,
     icon: AngularLogo
   },
   {
     name: "Project Management",
-    description: "lorem ipseum",
+    description: "Plan & lead small (3-4 devs) team projects",
     category: SkillCategory.Programming,
     icon: ProjectManagementLogo
   }
