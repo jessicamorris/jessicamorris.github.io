@@ -46,13 +46,13 @@ export const skills: Skill[] = [
   },
   {
     name: "React",
-    description: "Material UI, Redux, a11y",
+    description: "Material UI, ag-grid, a11y",
     category: SkillCategory.Programming,
     icon: ReactLogo
   },
   {
     name: "Databases",
-    description: "MongoDB, SQLite, ELK",
+    description: "MongoDB, SQLite, ELK, Neo4j",
     category: SkillCategory.Infrastructure,
     icon: DatabasesIcon
   },
