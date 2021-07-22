@@ -1,5 +1,9 @@
 import React from "react";
 
+// HTML parser
+import parse, { HTMLReactParserOptions } from "html-react-parser";
+import { Element, DataNode } from "domhandler/lib/node";
+
 // i18n
 import { useTranslation } from "react-i18next";
 
@@ -15,6 +19,7 @@ import { makeStyles, Theme } from "@material-ui/core/styles";
 // MUI Icons
 import RoomIcon from "@material-ui/icons/Room";
 
+// My stuff
 import Experience, { experiences } from "../models/experiences";
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -45,7 +50,7 @@ interface ExperienceCardProps {
   startDate: string;
   endDate: string;
   location: string;
-  children?: JSX.Element | JSX.Element[];
+  children?: string | JSX.Element | JSX.Element[];
 }
 
 const ExperienceCard = (props: ExperienceCardProps) => {
@@ -59,7 +64,7 @@ const ExperienceCard = (props: ExperienceCardProps) => {
           </Link>
         </Typography>
         <Typography paragraph>
-          {props.startDate} - {props.endDate} <RoomIcon fontSize="small" />
+          {props.startDate} - {props.endDate} <RoomIcon fontSize="inherit" />
           {props.location}
         </Typography>
         {props.children}
@@ -71,6 +76,23 @@ const ExperienceCard = (props: ExperienceCardProps) => {
 export default function ExperienceSection(): JSX.Element {
   const classes = useStyles();
   const { t } = useTranslation();
+
+  const options: HTMLReactParserOptions = {
+    replace: (domNode) => {
+      if (domNode instanceof Element && domNode.attribs) {
+        if (domNode.type === "tag" && domNode.tagName === "a") {
+          return (
+            <Link {...domNode.attribs}>
+              {domNode.children.map((child) => {
+                const childData = child as DataNode;
+                return childData.data;
+              })}
+            </Link>
+          );
+        }
+      }
+    }
+  };
 
   return (
     <div className={classes.root}>
@@ -94,13 +116,7 @@ export default function ExperienceSection(): JSX.Element {
                       endDate={experience.endDate}
                       location={experience.location}
                     >
-                      <ul>
-                        <li>
-                          <Typography variant="body2">
-                            Responsibilities woooo
-                          </Typography>
-                        </li>
-                      </ul>
+                      {parse(experience.responsibilities, options)}
                     </ExperienceCard>
                   </div>
                 </Grid>
