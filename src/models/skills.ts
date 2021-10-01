@@ -101,7 +101,7 @@ export const skills: Skill[] = [
   {
     name: "Project Management",
     description: "Plan & lead small (3-4 devs) team projects",
-    category: SkillCategory.Programming,
+    category: SkillCategory.SoftSkills,
     icon: ProjectManagementLogo
   }
 ];

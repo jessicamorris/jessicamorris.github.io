@@ -8,13 +8,13 @@ import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
+import Link from "@material-ui/core/Link";
 import SvgIcon from "@material-ui/core/SvgIcon";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles, Theme } from "@material-ui/core/styles";
 
 // My stuff
 import Skill, { SkillCategory, skills } from "../models/skills";
-import { Link } from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {},
@@ -131,6 +131,7 @@ export default function SkillsSection(): JSX.Element {
                 target="_blank"
                 rel="noopener"
                 color="inherit"
+                underline="always"
               >
                 The Noun Project
               </Link>
