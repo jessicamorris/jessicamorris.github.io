@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 
 // Material UI
 import AppBar from "@material-ui/core/AppBar";
-import Button from "@material-ui/core/Button";
+import Button, { ButtonProps } from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import Collapse from "@material-ui/core/Collapse";
@@ -63,9 +63,25 @@ const useStyles = makeStyles((theme: Theme) => ({
   }
 }));
 
-const AppHeaderButtonGroup = (): JSX.Element => {
+interface AppHeaderButtonGroupProps {
+  onClickCallback?: () => void;
+}
+
+const AppHeaderButtonGroup = ({
+  onClickCallback
+}: AppHeaderButtonGroupProps): JSX.Element => {
   const classes = useStyles();
   const theme: Theme = useTheme();
+
+  const header_offset = -63;
+  const scroll_duration = 800;
+  const scroll_button_common_props = {
+    spy: true,
+    smooth: true,
+    duration: scroll_duration,
+    offset: header_offset,
+    onClick: onClickCallback
+  };
 
   return (
     <StyledButtonGroup
@@ -80,10 +96,7 @@ const AppHeaderButtonGroup = (): JSX.Element => {
         component={Link}
         activeClass={classes.active}
         to="about"
-        spy={true}
-        smooth={true}
-        duration={800}
-        offset={-64}
+        {...scroll_button_common_props}
       >
         Home
       </Button>
@@ -92,10 +105,7 @@ const AppHeaderButtonGroup = (): JSX.Element => {
         component={Link}
         activeClass={classes.active}
         to="skills"
-        spy={true}
-        smooth={true}
-        duration={800}
-        offset={-64}
+        {...scroll_button_common_props}
       >
         Skills
       </Button>
@@ -104,10 +114,7 @@ const AppHeaderButtonGroup = (): JSX.Element => {
         component={Link}
         activeClass={classes.active}
         to="experience"
-        spy={true}
-        smooth={true}
-        duration={800}
-        offset={-64}
+        {...scroll_button_common_props}
       >
         Experience
       </Button>
@@ -116,10 +123,7 @@ const AppHeaderButtonGroup = (): JSX.Element => {
         component={Link}
         activeClass={classes.active}
         to="interests"
-        spy={true}
-        smooth={true}
-        duration={800}
-        offset={-64}
+        {...scroll_button_common_props}
       >
         Interests
       </Button>
@@ -131,10 +135,7 @@ const AppHeaderButtonGroup = (): JSX.Element => {
         component={Link}
         activeClass={classes.active}
         to="contact"
-        spy={true}
-        smooth={true}
-        duration={800}
-        offset={-64}
+        {...scroll_button_common_props}
       >
         Contact
       </Button>
@@ -178,7 +179,7 @@ export default function AppHeader(): JSX.Element {
         {useMediaQuery(theme.breakpoints.down("sm")) && (
           <Collapse in={isBarOpen}>
             <Toolbar>
-              <AppHeaderButtonGroup />
+              <AppHeaderButtonGroup onClickCallback={handleMenuButtonClick} />
             </Toolbar>
           </Collapse>
         )}
