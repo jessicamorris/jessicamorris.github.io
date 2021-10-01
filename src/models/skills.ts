@@ -18,10 +18,10 @@ import {
 import { SvgIcon } from "@material-ui/core";
 
 export enum SkillCategory {
-  All = "All",
-  Programming = "Programming",
-  Infrastructure = "Infrastructure",
-  SoftSkills = "Soft Skills"
+  All = "all",
+  Programming = "programming",
+  Infrastructure = "infrastructure",
+  SoftSkills = "softSkills"
 }
 
 export default interface Skill {

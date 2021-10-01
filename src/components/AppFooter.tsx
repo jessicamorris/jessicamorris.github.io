@@ -47,7 +47,7 @@ export default function AppFooter(): JSX.Element {
             </Grid>
             <Grid item xs={12} sm className={classes.hosted}>
               <Typography variant="body1">
-                {t("Footer hosting")}{" "}
+                {t("footer.hosting")}{" "}
                 <Link
                   color="inherit"
                   href="https://github.com/jessicamorris/jessicamorris.github.io/"

@@ -72,10 +72,10 @@ const Profile = () => {
         Jessica D. Morris
       </Typography>
       <Typography variant="h3" className={classes.title} color="primary">
-        {t("Biography job title")}
+        {t("biography.job.title")}
       </Typography>
       <Typography variant="h3" className={classes.employer} color="secondary">
-        {t("Biography job employer")}
+        {t("biography.job.employer")}
       </Typography>
       <div className={classes.socials}>
         <IconButton
@@ -125,34 +125,34 @@ const Biography = () => {
   return (
     <div>
       <Typography variant="h1" color="primary">
-        {t("Biography title")}
+        {t("biography.title")}
       </Typography>
       <Typography paragraph>
-        <Trans i18nKey="Biography content 1" components={{ a: <Link /> }} />
+        <Trans i18nKey="biography.content.1" components={{ a: <Link /> }} />
       </Typography>
-      <Typography paragraph>{t("Biography content 2")}</Typography>
-      <Typography paragraph>{t("Biography content 3")}</Typography>
+      <Typography paragraph>{t("biography.content.2")}</Typography>
+      <Typography paragraph>{t("biography.content.3")}</Typography>
       <Grid container>
         <Grid item xs={12} sm={6}>
           <Typography variant="h3" color="primary" style={{ fontWeight: "bold" }}>
-            {t("Biography interests title")}
+            {t("biography.interests.title")}
           </Typography>
 
           <ul>
             <li className={classes.spaciousLI}>
-              <Typography variant="body2">{t("Biography interest 1")}</Typography>
+              <Typography variant="body2">{t("biography.interests.1")}</Typography>
             </li>
             <li className={classes.spaciousLI}>
-              <Typography variant="body2">{t("Biography interest 2")}</Typography>
+              <Typography variant="body2">{t("biography.interests.2")}</Typography>
             </li>
             <li className={classes.spaciousLI}>
-              <Typography variant="body2">{t("Biography interest 3")}</Typography>
+              <Typography variant="body2">{t("biography.interests.3")}</Typography>
             </li>
           </ul>
         </Grid>
         <Grid item xs={12} sm={6}>
           <Typography variant="h3" color="primary" style={{ fontWeight: "bold" }}>
-            {t("Biography education title")}
+            {t("biography.education.title")}
           </Typography>
           <List dense disablePadding>
             <ListItem alignItems="flex-start">
@@ -161,8 +161,8 @@ const Biography = () => {
               </ListItemIcon>
               <ListItemText>
                 <div>
-                  <p>{t("Biography education 1 degree")}</p>
-                  <p>{t("Biography education 1 school")}, 2017</p>
+                  <p>{t("biography.education.1.degree")}</p>
+                  <p>{t("biography.education.1.school")}, 2017</p>
                 </div>
               </ListItemText>
             </ListItem>

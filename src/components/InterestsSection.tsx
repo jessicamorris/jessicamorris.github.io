@@ -66,7 +66,7 @@ export default function InterestsSection(): JSX.Element {
         <Grid container>
           <Grid item sm={12} md={4}>
             <Typography variant="h1" color="primary">
-              {t("Interests title")}
+              {t("interests.title")}
             </Typography>
           </Grid>
           <Grid item sm={12} md={8}>
@@ -82,7 +82,7 @@ export default function InterestsSection(): JSX.Element {
                           interestCategory === category ? classes.selected : undefined
                         }
                       >
-                        {interestCategory.valueOf()}
+                        {t(`interests.filter.${interestCategory.valueOf()}`)}
                       </Button>
                     );
                   }

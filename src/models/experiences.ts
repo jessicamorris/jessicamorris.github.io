@@ -21,14 +21,16 @@ export const experiences: Experience[] = [
         <li><strong>2019 - present Sensor Health & Well-Being team:</strong>
           <ul>
             <li>Maintaining & improving <a href="https://www.countermeasure.ca/presentations/observationdeck/" target="_blank" rel="noopener">ObservationDeck</a>, a web interface for automated reports derived from Host-Based Sensor data.</li>
-            <li>Designed & implemented automation for transferring ObservationDeck code & data across classification systems.</li>
-            <li>Developing microservices for enriching ObservationDeck data.</li>
+            <li>Designed & implemented automation for transferring ObservationDeck code & data across classification systems. Received an official award of recognition from management for this work.</li>
+            <li>Developing RESTful microservices for enriching ObservationDeck data.</li>
           </ul>
         </li>
         <li><strong>2018 - 2019 Host-Based Sensor Agent team:</strong>
           <ul>
             <li>Updated the browser module I'd developed as a co-op student.</li>
             <li>Co-developed an integration testing driver for the agent, written in Python and C.</li>
+            <li>Conducted technical interviews for prospective co-op students and employees.</li>
+            <li>Received a 2019 CSE Corporate Award as part of the Host-Based Sensor group.</li>
           </ul>
         </li>
         <li><strong>2017 - 2018 PALADIN (Data Sharing) team:</strong>
@@ -133,6 +135,7 @@ export const experiences: Experience[] = [
         <li>Used HP Quicktest Professional and VBScript to automate manual testing scenarios.</li>
         <li>Managed testing suites with HP Quality Centre.</li>
         <li>Designed a tool, written in Java, for checking changes in the QA Automation team's central object repository, as SVN wasn't tracking changes properly.</li>
+        <li>Received two "spot awards" for my commitment to my work, and engagement with the community.</li>
       </ul>`
   },
   {

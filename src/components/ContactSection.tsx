@@ -101,7 +101,7 @@ export default function ContactSection(): JSX.Element {
         <Grid container>
           <Grid item sm={12} md={4}>
             <Typography variant="h1" color="primary">
-              {t("Contact title")}
+              {t("contact.title")}
             </Typography>
           </Grid>
           <Grid item sm={12} md={8}>
@@ -115,7 +115,7 @@ export default function ContactSection(): JSX.Element {
                       rules={{ required: true, minLength: 2 }}
                       textFieldProps={{
                         id: "name",
-                        label: t("Contact field name"),
+                        label: t("contact.field.name"),
                         type: "text",
                         variant: "outlined",
                         color: "secondary",
@@ -140,7 +140,7 @@ export default function ContactSection(): JSX.Element {
                       rules={{ required: true }}
                       textFieldProps={{
                         id: "email",
-                        label: t("Contact field email"),
+                        label: t("contact.field.email"),
                         type: "email",
                         variant: "outlined",
                         color: "secondary",
@@ -164,7 +164,7 @@ export default function ContactSection(): JSX.Element {
                       rules={{ required: true, minLength: 10 }}
                       textFieldProps={{
                         id: "message",
-                        label: t("Contact field message"),
+                        label: t("contact.field.message"),
                         variant: "outlined",
                         color: "secondary",
                         InputProps: {
@@ -193,7 +193,7 @@ export default function ContactSection(): JSX.Element {
                       disableElevation
                       disabled={formspreeState.submitting}
                     >
-                      {t("Contact field submit")}
+                      {t("contact.field.submit")}
                     </Button>
                   </FormControl>
                 </div>

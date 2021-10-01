@@ -5,10 +5,10 @@ import PetsIcon from "@material-ui/icons/Pets";
 import Twitter from "@material-ui/icons/Twitter";
 
 export enum InterestCategory {
-  All = "All",
-  Software = "Software",
-  Hobbies = "Hobbies",
-  Causes = "Causes"
+  All = "all",
+  Software = "software",
+  Hobbies = "hobbies",
+  Causes = "causes"
 }
 
 export default interface Interest {
@@ -22,22 +22,6 @@ export default interface Interest {
 
 export const interests: Interest[] = [
   {
-    name: "Threat Hunting",
-    description: "lorem ipsum",
-    category: InterestCategory.Software,
-    buttonLink: "",
-    buttonIcon: GitHub,
-    buttonLabel: "Code"
-  },
-  {
-    name: "Baking",
-    description: "lorem ipsum",
-    category: InterestCategory.Hobbies,
-    buttonLink: "",
-    buttonIcon: Instagram,
-    buttonLabel: "Photos on Instagram"
-  },
-  {
     name: "2SLGBTQIA+ rights and issues",
     description: "lorem ipsum",
     category: InterestCategory.Causes,
@@ -45,14 +29,7 @@ export const interests: Interest[] = [
     buttonIcon: GitHub,
     buttonLabel: "Resources"
   },
-  {
-    name: "Women & Gender Equality",
-    description: "lorem ipsum",
-    category: InterestCategory.Causes,
-    buttonLink: "https://twitter.com/cse_cst/status/1235305283246862336",
-    buttonIcon: Twitter,
-    buttonLabel: "Quotation"
-  },
+
   {
     name: "Animal Welfare",
     description: "lorem ipsum",
@@ -62,8 +39,8 @@ export const interests: Interest[] = [
     buttonLabel: "Pepper's DNA test"
   },
   {
-    name: "Mechanical Keyboards",
-    description: "lorem ipsum",
+    name: "Baking",
+    description: "You'll catch me on the Great Canadian Baking Show one day!",
     category: InterestCategory.Hobbies,
     buttonLink: "",
     buttonIcon: Instagram,
@@ -78,11 +55,35 @@ export const interests: Interest[] = [
     buttonLabel: "Event Home Page"
   },
   {
+    name: "Mechanical Keyboards",
+    description: "lorem ipsum",
+    category: InterestCategory.Hobbies,
+    buttonLink: "",
+    buttonIcon: Instagram,
+    buttonLabel: "Photos on Instagram"
+  },
+  {
     name: "Mental Health",
     description: "lorem ipsum",
     category: InterestCategory.Causes,
     buttonLink: "",
     buttonIcon: GitHub,
     buttonLabel: "Resources"
+  },
+  {
+    name: "Threat Hunting",
+    description: "lorem ipsum",
+    category: InterestCategory.Software,
+    buttonLink: "",
+    buttonIcon: GitHub,
+    buttonLabel: "Code"
+  },
+  {
+    name: "Women & Gender Equality",
+    description: "lorem ipsum",
+    category: InterestCategory.Causes,
+    buttonLink: "https://twitter.com/cse_cst/status/1235305283246862336",
+    buttonIcon: Twitter,
+    buttonLabel: "Quotation"
   }
 ];

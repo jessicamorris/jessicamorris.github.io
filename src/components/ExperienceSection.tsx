@@ -100,7 +100,7 @@ export default function ExperienceSection(): JSX.Element {
         <Grid container>
           <Grid item sm={12} md={4}>
             <Typography variant="h1" color="primary">
-              {t("Experience title")}
+              {t("experience.title")}
             </Typography>
           </Grid>
           <Grid item sm={12} md={8}>

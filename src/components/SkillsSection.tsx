@@ -85,7 +85,7 @@ export default function SkillsSection(): JSX.Element {
     <div className={classes.root}>
       <Container>
         <Typography variant="h1" color="primary" className={classes.header}>
-          {t("Skills title")}
+          {t("skills.title")}
         </Typography>
         <div className={classes.buttons}>
           <ButtonGroup disableElevation color="secondary" variant="contained">
@@ -99,7 +99,7 @@ export default function SkillsSection(): JSX.Element {
                       skillCategory === category ? classes.selected : undefined
                     }
                   >
-                    {skillCategory.valueOf()}
+                    {t(`skills.filter.${skillCategory.valueOf()}`)}
                   </Button>
                 );
               }
