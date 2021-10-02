@@ -38,8 +38,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     margin: "0 auto"
   },
   name: {
+    fontFamily: '"Literata"',
     fontSize: "1.75rem",
-    fontWeight: 300,
+    fontWeight: 900,
     marginTop: theme.spacing(3),
     marginBottom: theme.spacing(1)
   },
@@ -127,11 +128,11 @@ const Biography = () => {
       <Typography variant="h1" color="primary">
         {t("biography.title")}
       </Typography>
-      <Typography paragraph>
-        <Trans i18nKey="biography.content.1" components={{ a: <Link /> }} />
-      </Typography>
-      <Typography paragraph>{t("biography.content.2")}</Typography>
-      <Typography paragraph>{t("biography.content.3")}</Typography>
+      <Trans
+        i18nKey="biography.content"
+        components={{ a: <Link />, abbr: <abbr />, p: <Typography paragraph /> }}
+      />
+
       <Grid container>
         <Grid item xs={12} sm={6}>
           <Typography variant="h3" color="primary" style={{ fontWeight: "bold" }}>

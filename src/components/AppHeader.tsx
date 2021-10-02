@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 
 // Material UI
 import AppBar from "@material-ui/core/AppBar";
-import Button, { ButtonProps } from "@material-ui/core/Button";
+import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import Collapse from "@material-ui/core/Collapse";
@@ -46,7 +46,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   name: {
     flexGrow: 1,
-    fontWeight: "bold",
+    fontFamily: '"Literata"',
+    fontWeight: 900,
     [theme.breakpoints.up("md")]: {
       textAlign: "left"
     },
@@ -73,7 +74,7 @@ const AppHeaderButtonGroup = ({
   const classes = useStyles();
   const theme: Theme = useTheme();
 
-  const header_offset = -63;
+  const header_offset = -63; // scrolling up is a little screwy at -64
   const scroll_duration = 800;
   const scroll_button_common_props = {
     spy: true,
@@ -97,6 +98,7 @@ const AppHeaderButtonGroup = ({
         activeClass={classes.active}
         to="about"
         {...scroll_button_common_props}
+        offset={header_offset - 1} // so the top pixel registers
       >
         Home
       </Button>

@@ -1,4 +1,5 @@
 import React from "react";
+import "@fontsource/literata";
 
 // i18n
 import i18n from "i18next";
@@ -31,13 +32,13 @@ const useStyles = makeStyles((theme: Theme) => ({
   content: {
     alignItems: "center"
   },
-  "home-section": {
+  section: {
     paddingTop: theme.spacing(10),
     paddingBottom: theme.spacing(15),
     "&:first-of-type": {
       paddingTop: theme.spacing(5)
     },
-    "&:nth-of-type(2n)": { backgroundColor: theme.palette.action.hover }
+    "&:nth-of-type(2n)": { backgroundColor: theme.palette.divider }
   }
 }));
 
@@ -55,19 +56,19 @@ export default function App(): JSX.Element {
         <CssBaseline />
         <main className={classes.content}>
           <div className={classes.toolbar} />
-          <section id="about" className={classes["home-section"]}>
+          <section id="about" className={classes.section}>
             <BiographySection />
           </section>
-          <section id="skills" className={classes["home-section"]}>
+          <section id="skills" className={classes.section}>
             <SkillsSection />
           </section>
-          <section id="experience" className={classes["home-section"]}>
+          <section id="experience" className={classes.section}>
             <ExperienceSection />
           </section>
-          <section id="interests" className={classes["home-section"]}>
+          <section id="interests" className={classes.section}>
             <InterestsSection />
           </section>
-          <section id="contact" className={classes["home-section"]}>
+          <section id="contact" className={classes.section}>
             <ContactSection />
           </section>
         </main>
