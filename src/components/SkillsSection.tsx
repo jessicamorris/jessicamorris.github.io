@@ -25,8 +25,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     textAlign: "center"
   },
   featurette: {
-    width: theme.spacing(7),
-    height: theme.spacing(7)
+    width: theme.spacing(8),
+    height: theme.spacing(8)
   },
   name: {
     marginTop: 0,
