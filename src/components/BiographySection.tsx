@@ -24,6 +24,9 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import SchoolIcon from "@material-ui/icons/School";
 import TwitterIcon from "@material-ui/icons/Twitter";
 
+// My stuff
+import me from "../static/images/me.jpg";
+
 const useStyles = makeStyles((theme: Theme) => ({
   root: {},
   profile: {
@@ -38,27 +41,44 @@ const useStyles = makeStyles((theme: Theme) => ({
     margin: "0 auto"
   },
   name: {
-    fontFamily: '"Literata"',
-    fontSize: "1.75rem",
+    fontFamily: '"Literata", "Roboto", "Helvetica", "Arial", sans-serif',
+    fontSize: "2rem",
     fontWeight: 900,
     marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(2)
+  },
+  title: {
+    fontSize: "1.25rem",
+    fontWeight: 300,
+    marginTop: 0,
     marginBottom: theme.spacing(1)
   },
-  title: { fontSize: "1rem", fontWeight: 300, marginTop: theme.spacing(1) },
   employer: {
-    fontSize: "1rem",
+    fontSize: "1.25rem",
     fontWeight: 300,
-    marginTop: theme.spacing(1)
+    marginTop: 0,
+    marginBottom: theme.spacing(1)
   },
   socials: {
     marginTop: theme.spacing(3)
+  },
+  subheading: {
+    fontWeight: 800,
+    fontFamily: '"Literata", "Roboto", "Helvetica", "Arial", sans-serif',
+    marginTop: theme.spacing(3),
+    fontSize: theme.typography.fontSize * 1.5
   },
   spaciousLI: {
     marginBottom: theme.spacing(1)
   },
   educationIcon: {
-    margin: theme.spacing(3, 0, 0),
+    margin: theme.spacing(3, -2, 0),
     color: theme.palette.text.primary
+  },
+  "ul-edu": {
+    listStyle: "none",
+    marginLeft: "2.5em",
+    paddingLeft: 0
   }
 }));
 
@@ -68,7 +88,9 @@ const Profile = () => {
 
   return (
     <div className={classes.profile}>
-      <Avatar className={classes.avatar}>JM</Avatar>
+      <Avatar className={classes.avatar} src={me}>
+        JM
+      </Avatar>
       <Typography variant="h2" className={classes.name}>
         Jessica D. Morris
       </Typography>
@@ -95,7 +117,7 @@ const Profile = () => {
         >
           <GitHubIcon fontSize="large" color="secondary" />
         </IconButton>
-        <IconButton
+        {/* <IconButton
           component={Link}
           href="https://instagram.com/jess_ex_machina"
           target="_blank"
@@ -110,7 +132,7 @@ const Profile = () => {
           rel="noopener"
         >
           <TwitterIcon fontSize="large" color="secondary" />
-        </IconButton>
+        </IconButton> */}
         <IconButton component={Link} href="/resume.pdf" target="_blank">
           <DeveloperBoardIcon fontSize="large" color="secondary" />
         </IconButton>
@@ -135,7 +157,7 @@ const Biography = () => {
 
       <Grid container>
         <Grid item xs={12} sm={6}>
-          <Typography variant="h3" color="primary" style={{ fontWeight: "bold" }}>
+          <Typography variant="h3" color="primary" className={classes.subheading}>
             {t("biography.interests.title")}
           </Typography>
 
@@ -152,7 +174,7 @@ const Biography = () => {
           </ul>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Typography variant="h3" color="primary" style={{ fontWeight: "bold" }}>
+          <Typography variant="h3" color="primary" className={classes.subheading}>
             {t("biography.education.title")}
           </Typography>
           <List dense disablePadding>

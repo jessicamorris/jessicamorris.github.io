@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     }
   },
   toolbar: {
-    padding: theme.spacing(3, 0)
+    padding: theme.spacing(3, 0, 0)
   }
 }));
 
@@ -41,9 +41,9 @@ export default function AppFooter(): JSX.Element {
     <AppBar position="static" color="primary" className={classes.root} elevation={0}>
       <Container>
         <Toolbar className={classes.toolbar}>
-          <Grid container spacing={2}>
+          <Grid container>
             <Grid item xs={12} sm>
-              <Typography variant="body1">© 2021 Jessica D. Morris</Typography>
+              <Typography variant="body1">© 2022 Jessica D. Morris</Typography>
             </Grid>
             <Grid item xs={12} sm className={classes.hosted}>
               <Typography variant="body1">

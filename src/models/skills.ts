@@ -46,13 +46,13 @@ export const skills: Skill[] = [
   },
   {
     name: "React",
-    description: "Material UI, ag-grid, a11y",
+    description: "Material UI, ag-grid, a11y, redux",
     category: SkillCategory.Programming,
     icon: ReactLogo
   },
   {
     name: "Databases",
-    description: "MongoDB, SQLite, ELK, Neo4j",
+    description: "MongoDB, SQL (SQLite, Oracle), Neo4j",
     category: SkillCategory.Infrastructure,
     icon: DatabasesIcon
   },
@@ -94,7 +94,7 @@ export const skills: Skill[] = [
   },
   {
     name: "Angular",
-    description: "Materials, Protractor, REST and error handling services",
+    description: "Material UI, Cypress, RxJS",
     category: SkillCategory.Programming,
     icon: AngularLogo
   },

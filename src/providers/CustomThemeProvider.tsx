@@ -8,25 +8,33 @@ import Themes from "../models/themes";
 const overrides: Overrides = {
   MuiTypography: {
     h1: {
-      fontSize: "2.25rem",
-      margin: "0 0 2.25rem"
+      fontSize: "40.5px",
+      margin: "1rem 0 1.5rem",
+      fontFamily: '"Literata", "Roboto", "Helvetica", "Arial", sans-serif'
     },
-    h2: { fontSize: "1.75rem", fontWeight: 300, margin: "20px 0 10px" },
+    h2: {
+      fontFamily: '"Literata", "Roboto", "Helvetica", "Arial", sans-serif',
+      fontSize: "1.75rem",
+      fontWeight: 300,
+      margin: "20px 0 10px"
+    },
     h3: {
       fontWeight: 700,
       marginTop: "1.5rem",
       fontSize: "1.25rem"
     },
     h4: {
-      fontSize: "1.5rem"
+      fontSize: "1.15rem"
     },
     paragraph: {
-      fontSize: "1rem"
+      fontSize: "18px"
     },
     body1: {
-      fontSize: "1rem"
+      fontSize: "18px",
+      lineHeight: "30px",
+      marginBottom: "18px"
     },
-    body2: { fontSize: "0.9rem" }
+    body2: { fontSize: "16px" }
   },
   MuiButton: {
     label: {

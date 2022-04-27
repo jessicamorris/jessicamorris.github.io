@@ -136,8 +136,8 @@ export default function ThemePicker(): JSX.Element {
                         tabIndex={0}
                         key={index}
                         onClick={(e) => handleThemeClicked(index, e)}
+                        selected={index === themeIndex}
                       >
-                        {index == themeIndex ? "> " : ""}
                         {theme.name}
                       </MenuItem>
                     );

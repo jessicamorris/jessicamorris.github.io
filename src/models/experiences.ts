@@ -10,37 +10,64 @@ export default interface Experience {
 
 export const experiences: Experience[] = [
   {
-    title: "Software Systems Developer",
-    employer: "Canadian Center for Cyber Security",
-    companyLink: "https://cyber.gc.ca/",
-    startDate: "June 2017",
+    title: "Cyber Developer - Report Authoring",
+    employer: "Communications Security Establishment",
+    companyLink: "https://cse-cst.gc.ca",
+    startDate: "December 2021",
     endDate: "present",
     location: "Ottawa, ON",
     responsibilities: `
-      <ul>
-        <li><strong>2019 - present Sensor Health & Well-Being team:</strong>
-          <ul>
-            <li>Maintaining & improving <a href="https://www.countermeasure.ca/presentations/observationdeck/" target="_blank" rel="noopener">ObservationDeck</a>, a web interface for automated reports derived from Host-Based Sensor data.</li>
-            <li>Designed & implemented automation for transferring ObservationDeck code & data across classification systems. Received an official award of recognition from management for this work.</li>
-            <li>Developing RESTful microservices for enriching ObservationDeck data.</li>
-          </ul>
-        </li>
-        <li><strong>2018 - 2019 Host-Based Sensor Agent team:</strong>
-          <ul>
-            <li>Updated the browser module I'd developed as a co-op student.</li>
-            <li>Co-developed an integration testing driver for the agent, written in Python and C.</li>
-            <li>Conducted technical interviews for prospective co-op students and employees.</li>
-            <li>Received a 2019 CSE Corporate Award as part of the Host-Based Sensor group.</li>
-          </ul>
-        </li>
-        <li><strong>2017 - 2018 PALADIN (Data Sharing) team:</strong>
-          <ul>
-            <li>Developed a data translation module for ingesting STIX (Structured Threat Information eXpression) 1.x-structured information.</li>
-            <li>Designed & led a team of 3 developers to implement a web interface for viewing Cyber Knowledge Base data, written in Angular.</li>
-            <li>Onboarded new employees, contractors, and co-op students.</li>
-          </ul>
-        </li>
-      </ul>`
+    <ul>
+      <li>Implementing front-end features in Angular, such as support for multi-classification environments, and automated testing using Cypress.</li>
+      <li>Working with the Information Management team to pilot our use case for the Digital Vault project, including automation for archiving published reports. CSE's Digital Vault will be the first digital archiving system in the Government of Canada.</li>
+    </ul>
+    `
+  },
+  {
+    title: "Cyber Developer - ObservationDeck",
+    employer: "Canadian Centre for Cyber Security",
+    companyLink: "https://cyber.gc.ca/",
+    startDate: "October 2019",
+    endDate: "November 2021",
+    location: "Ottawa, ON",
+    responsibilities: `
+    <ul>
+      <li>Developed features for <a href="https://www.countermeasure.ca/presentations/observationdeck/" target="_blank" rel="noopener">ObservationDeck</a>, an automated cyber defence reporting system for government departments.</li>
+      <li>Designed & implemented an automation system for transferring ObservationDeck code & data across classification systems. Received an official award of recognition from management for this system.</li>
+      <li>Implemented RESTful microservices for enriching ObservationDeck data. One of my FastAPI-based services is being actively collaborated on with a second party.</li>
+      <li>Designed & implemented centralized authorization control and audit logging for supporting microservices using nginx and Lua scripts.</li>
+    </ul>
+    `
+  },
+  {
+    title: "Cyber Developer - Host-Based Sensor Agent",
+    employer: "Canadian Centre for Cyber Security",
+    companyLink: "https://cyber.gc.ca/",
+    startDate: "June 2018",
+    endDate: "September 2019",
+    location: "Ottawa, ON",
+    responsibilities: `
+    <ul>
+      <li>Added more use cases to the web browser module I'd developed as a student.</li>
+      <li>Co-developed an integration testing driver for the agent, written in Python and C.</li>
+      <li>Conducted technical interviews for prospective co-op students and employees.</li>
+      <li>Received a 2019 CSE Corporate Award as a member of the Host-Based Sensor group.</li>
+    </ul>`
+  },
+  {
+    title: "Cyber Developer - Knowledge Sharing",
+    employer: "Communications Security Establishment",
+    companyLink: "https://cse-cst.gc.ca",
+    startDate: "June 2017",
+    endDate: "May 2018",
+    location: "Ottawa, ON",
+    responsibilities: `
+    <ul>
+      <li>Developed a data translation module for ingesting STIX (Structured Threat Information eXpression) 1.x-structured information.</li>
+      <li>Led a team of 3 developers to deesign & implement a web interface for viewing Cyber Knowledge Base data as a directed graph, written in Angular. This interface has since been productionized and incorporated into the CCCS's Cyber Knowledge Base web application.</li>
+      <li>Onboarded new employees, contractors, and co-op students.</li>
+    </ul>
+    `
   },
   {
     title: "Teaching Assistant - SYSC 2100: Algorithms and Data Structures",

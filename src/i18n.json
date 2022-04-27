@@ -5,10 +5,10 @@
                 "biography": {
                     "title": "Biography",
                     "job": {
-                        "title": "Software Systems Developer",
-                        "employer": "Canadian Centre for Cyber Security"
+                        "title": "Cyber Developer",
+                        "employer": "Communications Security Establishment"
                     },
-                    "content": "<p>Hi there, I'm Jess <a href=\"https://pronoun.is/she\" target=\"_blank\" rel=\"noopener\">(she/her)</a>! I'm currently working as a Software Systems Developer at the Canadian Center for Cyber Security in the Sensor Health & Well-Being team, where I work on systems automation using Python, and evangelize about the joys of the <abbr title=\"FastAPI/React/MongoDB\">FARM</abbr> stack. I have a Bachelor's degree in Computer Systems Engineering from Carleton University, where I proudly kept my name on the Dean's List for all five years of my degree, and regularly volunteered for Faculty of Engineering-hosted events such as GoENGGirl.</p><p>Second paragraph</p><p>When I'm not mashing buttons for profit, you can find me mashing buttons for fun: building a new mechanical keyboard for my collection, participating in the Great Canadian Baking Show fan group, or tinkering with my gaming PC.</p>",
+                    "content": "<p>Hi there, I'm Jess <a href=\"https://pronoun.is/she\" target=\"_blank\" rel=\"noopener\">(she/her)</a>, currently working as a Software Systems Developer at the Communications Security Establishment on the Report Authoring application team. I'm currently working on implementing web front-end features in Angular, a Spring Boot/MongoDB back-end, and sneaking in some systems automation using Python.</p><p>I have a Bachelor's degree in Computer Systems Engineering from Carleton University, where I proudly kept my name on the Dean's List for all five years of my degree, and regularly volunteered for Faculty of Engineering-hosted events such as GoENGGirl.</p><p>Outside of work, I also enjoy building mechanical keyboards, tinkering with my gaming PC, and honing my baking skills.",
                     "interests": {
                         "title": "Interests",
                         "1": "Information Security",
@@ -18,7 +18,7 @@
                     "education": {
                         "title": "Education",
                         "1": {
-                            "degree": "B.Eng in Computer Systems, with High Distinction",
+                            "degree": "B.Eng in Computer Systems with High Distinction",
                             "school": "Carleton University"
                         }
                     }
@@ -33,7 +33,17 @@
                     }
                 },
                 "experience": {
-                    "title": "Experience"
+                    "title": "Experience",
+                    "jobs": [
+                        {
+                            "title":"Software Systems Developer",
+                            "employer": "Canadian Centre for Cyber Security",
+                            "employerLink": "",
+                            "startDate": "June 2017",
+                            "endDate": "present",
+                            "location": "Ottawa, Canada"
+                        }
+                    ]
                 },
                 "interests": {
                     "title": "Interests",

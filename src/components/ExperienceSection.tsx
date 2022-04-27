@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // HTML parser
 import parse, { HTMLReactParserOptions } from "html-react-parser";
@@ -8,6 +8,7 @@ import { Element, DataNode } from "domhandler/lib/node";
 import { useTranslation } from "react-i18next";
 
 // Material UI
+import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Container from "@material-ui/core/Container";
@@ -38,8 +39,11 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: "auto",
     maxWidth: "100%"
   },
-  experienceCard: {
+  card: {
     marginBottom: theme.spacing(5)
+  },
+  pin: {
+    margin: theme.spacing(0, 1)
   }
 }));
 
@@ -54,17 +58,22 @@ interface ExperienceCardProps {
 }
 
 const ExperienceCard = (props: ExperienceCardProps) => {
+  const classes = useStyles();
+
   return (
     <Card>
       <CardContent>
-        <Typography variant="h4">{props.title}</Typography>
-        <Typography variant="h4">
+        <Typography variant="h4" style={{ fontWeight: "bold" }}>
+          {props.title}
+        </Typography>
+        <Typography variant="h4" style={{ color: "inherit" }}>
           <Link href={props.companyLink} target="_blank" rel="noopener">
             {props.company}
           </Link>
         </Typography>
-        <Typography paragraph>
-          {props.startDate} - {props.endDate} <RoomIcon fontSize="inherit" />
+        <Typography variant="caption">
+          {props.startDate} - {props.endDate}
+          <span className={classes.pin}>&middot;</span>
           {props.location}
         </Typography>
         {props.children}
@@ -76,6 +85,7 @@ const ExperienceCard = (props: ExperienceCardProps) => {
 export default function ExperienceSection(): JSX.Element {
   const classes = useStyles();
   const { t } = useTranslation();
+  const [showMore, setShowMore] = useState<boolean>(false);
 
   const options: HTMLReactParserOptions = {
     replace: (domNode) => {
@@ -104,24 +114,37 @@ export default function ExperienceSection(): JSX.Element {
             </Typography>
           </Grid>
           <Grid item sm={12} md={8}>
-            {experiences.map((experience: Experience, index: number) => {
-              return (
-                <Grid item xs={12} key={index}>
-                  <div className={classes.experienceCard}>
-                    <ExperienceCard
-                      title={experience.title}
-                      company={experience.employer}
-                      companyLink={experience.companyLink}
-                      startDate={experience.startDate}
-                      endDate={experience.endDate}
-                      location={experience.location}
-                    >
-                      {parse(experience.responsibilities, options)}
-                    </ExperienceCard>
-                  </div>
-                </Grid>
-              );
-            })}
+            {experiences
+              .slice(0, showMore ? experiences.length : 5)
+              .map((experience: Experience, index: number) => {
+                return (
+                  <Grid item xs={12} key={index}>
+                    <div className={classes.card}>
+                      <ExperienceCard
+                        title={experience.title}
+                        company={experience.employer}
+                        companyLink={experience.companyLink}
+                        startDate={experience.startDate}
+                        endDate={experience.endDate}
+                        location={experience.location}
+                      >
+                        {parse(experience.responsibilities, options)}
+                      </ExperienceCard>
+                    </div>
+                  </Grid>
+                );
+              })}
+            <Grid item sm={12} md={8}>
+              <Button
+                variant="contained"
+                color="secondary"
+                disableElevation
+                fullWidth
+                onClick={() => setShowMore(!showMore)}
+              >
+                Show {showMore ? "Less" : "More"}
+              </Button>
+            </Grid>
           </Grid>
         </Grid>
       </Container>
