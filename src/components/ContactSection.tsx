@@ -1,7 +1,7 @@
 import React from "react";
 import { Control, useController, useForm } from "react-hook-form";
-import { useForm as useFormspree } from "@formspree/react";
-import { decode } from "js-base64";
+// import { useForm as useFormspree } from "@formspree/react";
+// import { decode } from "js-base64";
 
 // i18n
 import { useTranslation } from "react-i18next";
@@ -17,7 +17,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles, Theme } from "@material-ui/core/styles";
 
 // Base64-encoded Formspree link, because I don't like to live life on the edge
-const contact = "bWVxdmxvcXA=";
+// const contact = "bWVxdmxvcXA=";
 
 interface ValidatedTextFieldProps {
   name: "name" | "email" | "message";
@@ -44,27 +44,38 @@ const ValidatedTextField = ({
   return <TextField {...inputProps} {...textFieldProps} inputRef={ref} />;
 };
 
-interface EmailConfirmModalProps {
-  name: string;
-}
+// interface EmailConfirmModalProps {
+//   name: string;
+// }
 
-const EmailConfirmModal = ({ name }: EmailConfirmModalProps) => {
-  const [open, setOpen] = React.useState<boolean>(true);
+// const EmailConfirmModal = ({ name }: EmailConfirmModalProps) => {
+//   const [open, setOpen] = React.useState<boolean>(true);
 
-  return (
-    <div>
-      <Typography paragraph>
-        Thank you for your email, {name}! I'll get back to you in 1-3 business days.
-      </Typography>
-      <Button onClick={() => setOpen(false)}>Close</Button>
-    </div>
-  );
-};
+//   return (
+//     <div>
+//       <Typography paragraph>
+//         Thank you for your email, {name}! I'll get back to you in 1-3 business days.
+//       </Typography>
+//       <Button onClick={() => setOpen(false)}>Close</Button>
+//     </div>
+//   );
+// };
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {},
   formField: {
     marginBottom: theme.spacing(2)
+  },
+  modal: {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: 500,
+    backgroundColor: theme.palette.background.paper,
+    border: `1px solid ${theme.palette.divider}`,
+    borderRadius: theme.spacing(1),
+    padding: theme.spacing(2)
   }
 }));
 
@@ -77,11 +88,17 @@ interface FormData {
 export default function ContactSection(): JSX.Element {
   const classes = useStyles();
   const { t } = useTranslation();
-  const [formspreeState, handleFormspreeSubmit] = useFormspree(decode(contact));
+  // const [formspreeState, handleFormspreeSubmit] = useFormspree(decode(contact));
   const [modalOpen, setModalOpen] = React.useState<boolean>(false);
+  const [isDirty, setIsDirty] = React.useState<boolean>(false);
+  const onTextFieldClick = () => {
+    if (!isDirty) {
+      setModalOpen(true);
+      setIsDirty(true);
+    }
+  };
 
   const {
-    register,
     handleSubmit,
     control,
     formState: { errors }
@@ -89,10 +106,11 @@ export default function ContactSection(): JSX.Element {
     defaultValues: { name: "", email: "", message: "" }
   });
 
-  const onSubmit = (data: FormData) => {
+  const onSubmit = () => {
+    setModalOpen(true);
     // display form data on success
-    alert("SUCCESS!! :-)\n\n" + JSON.stringify(data, null, 4));
-    handleFormspreeSubmit(data);
+    //alert("SUCCESS!! :-)\n\n" + JSON.stringify(data, null, 4));
+    //handleFormspreeSubmit(data);
   };
 
   return (
@@ -114,6 +132,7 @@ export default function ContactSection(): JSX.Element {
                       control={control}
                       rules={{ required: true, minLength: 2 }}
                       textFieldProps={{
+                        onFocus: onTextFieldClick,
                         id: "name",
                         label: t("contact.field.name"),
                         type: "text",
@@ -139,6 +158,7 @@ export default function ContactSection(): JSX.Element {
                       control={control}
                       rules={{ required: true }}
                       textFieldProps={{
+                        onFocus: onTextFieldClick,
                         id: "email",
                         label: t("contact.field.email"),
                         type: "email",
@@ -163,6 +183,7 @@ export default function ContactSection(): JSX.Element {
                       control={control}
                       rules={{ required: true, minLength: 10 }}
                       textFieldProps={{
+                        onFocus: onTextFieldClick,
                         id: "message",
                         label: t("contact.field.message"),
                         variant: "outlined",
@@ -191,7 +212,7 @@ export default function ContactSection(): JSX.Element {
                       variant="outlined"
                       color="secondary"
                       disableElevation
-                      disabled={formspreeState.submitting}
+                      // disabled={formspreeState.submitting}
                     >
                       {t("contact.field.submit")}
                     </Button>
@@ -202,6 +223,15 @@ export default function ContactSection(): JSX.Element {
           </Grid>
         </Grid>
       </Container>
+      <Modal open={modalOpen} onClose={() => setModalOpen(false)}>
+        <div className={classes.modal}>
+          <Typography variant="h5">So, funny story...</Typography>
+          <Typography variant="body2">
+            I haven't implemented the contact section! You can get a hold of me with the
+            email button under my profile picture.
+          </Typography>
+        </div>
+      </Modal>
     </div>
   );
 }

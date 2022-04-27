@@ -17,9 +17,6 @@ import Link from "@material-ui/core/Link";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles, Theme } from "@material-ui/core/styles";
 
-// MUI Icons
-import RoomIcon from "@material-ui/icons/Room";
-
 // My stuff
 import Experience, { experiences } from "../models/experiences";
 

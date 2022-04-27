@@ -1,9 +1,6 @@
 import { SvgIconComponent } from "@material-ui/icons";
 import EventNoteIcon from "@material-ui/icons/EventNote";
-import GitHub from "@material-ui/icons/GitHub";
-import Instagram from "@material-ui/icons/Instagram";
 import PetsIcon from "@material-ui/icons/Pets";
-import Reddit from "@material-ui/icons/Reddit";
 import Twitter from "@material-ui/icons/Twitter";
 
 import cookies from "../static/images/cookies.jpg";
@@ -30,8 +27,8 @@ export const interests: Interest[] = [
   {
     name: "Women & Gender Equality",
     description: [
-      "",
-      "I've spoken at a WoSEC (Women in Security) Montreal panel on <what did I talk about?>."
+      "Since most gender identities are a minority in tech, I try to be the role model I wish I'd had when I was younger. I enjoy volunteering for events like HackerGal, where I can give back to the community and uplift the next generation of professionals.",
+      "I've spoken at a WoSEC (Women in Security) Montreal panel on what the future cyber security landscape could look like because of the COVID-19 pandemic. This event was attended by cyber security professionals from government and industry."
     ],
     category: InterestCategory.Causes,
     buttonLink: "https://twitter.com/cse_cst/status/1235305283246862336",
@@ -50,7 +47,7 @@ export const interests: Interest[] = [
   {
     name: "Hackathons",
     description: [
-      "I've been participating in the Canadian Centre for Cyber Security's two annual cyber defence hackathons since 2017 in various roles.",
+      "I've been participating in the Canadian Centre for Cyber Security's two annual cyber defence hackathons since 2017. I was quickly uplifted from participant to leadership roles after my first year at these events.",
       "GeekWeek is an unclassified event targeted towards the private sector. I've been a project team lead for three years now, most recently for the Cyber Threat Hunting team where I designed a prototype for a pipeline that analyzes modules in the Python Package Index and scores them on potential maliciousness."
     ],
     category: InterestCategory.Software,
@@ -70,7 +67,7 @@ export const interests: Interest[] = [
   {
     name: "Animal Welfare",
     description: [
-      "Rescuing dogs has brought so much joy to my life, and I'm drawn towards the dogs who may not be a great fit for most families. I'm hoping to start fostering palliative care dogs in Fall 2022."
+      "I'm an animal person, and rescuing dogs has brought so much joy to my life. I'm hoping to start fostering palliative care dogs in Fall 2022."
     ],
     category: InterestCategory.Causes,
     buttonLink: "https://embk.me/pepper566",

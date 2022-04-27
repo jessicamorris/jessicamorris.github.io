@@ -20,9 +20,9 @@ import { Theme, makeStyles } from "@material-ui/core/styles";
 import DeveloperBoardIcon from "@material-ui/icons/DeveloperBoard";
 import EmailIcon from "@material-ui/icons/Email";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import InstagramIcon from "@material-ui/icons/Instagram";
+// import InstagramIcon from "@material-ui/icons/Instagram";
 import SchoolIcon from "@material-ui/icons/School";
-import TwitterIcon from "@material-ui/icons/Twitter";
+// import TwitterIcon from "@material-ui/icons/Twitter";
 
 // My stuff
 import me from "../static/images/me.jpg";

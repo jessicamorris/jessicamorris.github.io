@@ -36,6 +36,13 @@ export const experiences: Experience[] = [
       <li>Designed & implemented an automation system for transferring ObservationDeck code & data across classification systems. Received an official award of recognition from management for this system.</li>
       <li>Implemented RESTful microservices for enriching ObservationDeck data. One of my FastAPI-based services is being actively collaborated on with a second party.</li>
       <li>Designed & implemented centralized authorization control and audit logging for supporting microservices using nginx and Lua scripts.</li>
+      <li>Implemented the Scrum process for the team, which included:
+        <ul>
+          <li>Collaborating with Product Owner and Supervisor on designing processes for Sprint planning, managing tasks, and release management.</li>
+          <li>Documenting the new processes for all members of the Scrum team on easy-to-reference Confluence pages.</li>
+          <li>Coaching the Scrum team on the new processes.</li>
+        </ul>    
+      </li>
     </ul>
     `
   },
