@@ -10,16 +10,31 @@ export default interface Experience {
 
 export const experiences: Experience[] = [
   {
-    title: "Cyber Developer - Report Authoring",
-    employer: "Communications Security Establishment",
-    companyLink: "https://cse-cst.gc.ca",
-    startDate: "December 2021",
+    title: "Senior Software Development Consultant",
+    employer: "Reverso",
+    companyLink: "https://www.reverso.net",
+    startDate: "July 2022",
     endDate: "present",
     location: "Ottawa, ON",
     responsibilities: `
     <ul>
-      <li>Implementing front-end features in Angular, such as support for multi-classification environments, and automated testing using Cypress.</li>
-      <li>Working with the Information Management team to pilot our use case for the Digital Vault project, including automation for archiving published reports. CSE's Digital Vault will be the first digital archiving system in the Government of Canada.</li>
+      <li>Using test-driven development to develop features for a facade between a .NET Framework RESTful back-end and text correction engines.</li>
+      <li>Bugfixes for front-end using Razor pages.</li>
+    </ul>
+    `
+  },
+  {
+    title: "Cyber Developer - Report Authoring",
+    employer: "Communications Security Establishment",
+    companyLink: "https://cse-cst.gc.ca",
+    startDate: "December 2021",
+    endDate: "July 2022",
+    location: "Ottawa, ON",
+    responsibilities: `
+    <ul>
+      <li>Implementend front-end features in Angular, such as support for multi-classification environments, and automated testing using Cypress.</li>
+      <li>Worked with the Information Management team to pilot a use case for the Digital Vault project, automation for archiving published reports. CSE's Digital Vault will be the first fully automated digital archiving system in the Government of Canada.</li>
+      <li>Diagnosed bugs with end users and made live corrections in the database when necessary, and wrote comprehensive bug reports </li>
     </ul>
     `
   },

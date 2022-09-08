@@ -5,10 +5,10 @@
                 "biography": {
                     "title": "Biography",
                     "job": {
-                        "title": "Cyber Developer",
-                        "employer": "Communications Security Establishment"
+                        "title": "Independent Software Consultant",
+                        "employer": "Critical Success Software Solutions Ltd."
                     },
-                    "content": "<p>Hi there, I'm Jess <a href=\"https://pronoun.is/she\" target=\"_blank\" rel=\"noopener\">(she/her)</a>, currently employed as a Cyber Developer at the Communications Security Establishment on the Report Authoring application team. I'm working on implementing web front-end features in Angular, a Spring Boot/MongoDB back-end, and sneaking in some systems automation using Python.</p><p>I have a Bachelor's degree in Computer Systems Engineering from Carleton University, where I proudly kept my name on the Dean's List for all five years of my degree, and regularly volunteered for Faculty of Engineering-hosted events such as GoENGGirl.</p><p>Outside of work, I also enjoy building mechanical keyboards, tinkering with my gaming PC, and honing my baking skills.",
+                    "content": "<p>Hi there, I'm Jess <a href=\"https://pronoun.is/she\" target=\"_blank\" rel=\"noopener\">(she/her)</a>, and I'm a freelance as a software development consultant. I'm currently on contract with Reverso, where I've been working on a .NET framework back-end and Razor Pages front-end. For my personal projects, I enjoy the FARM stack (FastAPI/React/MongoDB), generously employing dependency injection, and writing the tests first.</p><p>I have a Bachelor's degree in Computer Systems Engineering from Carleton University, where I proudly kept my name on the Dean's List for all five years of my degree, and regularly volunteered for Faculty of Engineering-hosted events such as GoENGGirl.</p><p>Outside of work, I also enjoy building mechanical keyboards, tinkering with my gaming PC, and honing my baking skills.",
                     "interests": {
                         "title": "Interests",
                         "1": "Information Security",
