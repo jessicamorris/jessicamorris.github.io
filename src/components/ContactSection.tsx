@@ -63,6 +63,11 @@ const ValidatedTextField = ({
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {},
+  [`@media print`]: {
+    root: {
+      display: "none"
+    }
+  },
   formField: {
     marginBottom: theme.spacing(2)
   },

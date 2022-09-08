@@ -44,6 +44,11 @@ const useStyles = makeStyles((theme: Theme) => ({
     backgroundColor: "white",
     color: "black"
   },
+  [`@media print`]: {
+    root: {
+      display: "none"
+    }
+  },
   name: {
     flexGrow: 1,
     fontFamily: '"Literata"',

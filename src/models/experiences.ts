@@ -32,7 +32,7 @@ export const experiences: Experience[] = [
     location: "Ottawa, ON",
     responsibilities: `
     <ul>
-      <li>Implementend front-end features in Angular, such as support for multi-classification environments, and automated testing using Cypress.</li>
+      <li>Implemented front-end features in Angular, such as support for multi-classification environments, and automated testing using Cypress.</li>
       <li>Worked with the Information Management team to pilot a use case for the Digital Vault project, automation for archiving published reports. CSE's Digital Vault will be the first fully automated digital archiving system in the Government of Canada.</li>
       <li>Diagnosed bugs with end users and made live corrections in the database when necessary, and wrote comprehensive bug reports </li>
     </ul>
