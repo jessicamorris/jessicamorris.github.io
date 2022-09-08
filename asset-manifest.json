@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.6671bb88.chunk.css",
-    "main.js": "/static/js/main.66bcbdac.chunk.js",
-    "main.js.map": "/static/js/main.66bcbdac.chunk.js.map",
+    "main.js": "/static/js/main.94d8c562.chunk.js",
+    "main.js.map": "/static/js/main.94d8c562.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.10f046dd.js",
     "runtime-main.js.map": "/static/js/runtime-main.10f046dd.js.map",
     "static/css/2.6f72f381.chunk.css": "/static/css/2.6f72f381.chunk.css",
-    "static/js/2.09c3a7fb.chunk.js": "/static/js/2.09c3a7fb.chunk.js",
-    "static/js/2.09c3a7fb.chunk.js.map": "/static/js/2.09c3a7fb.chunk.js.map",
+    "static/js/2.3ad2e016.chunk.js": "/static/js/2.3ad2e016.chunk.js",
+    "static/js/2.3ad2e016.chunk.js.map": "/static/js/2.3ad2e016.chunk.js.map",
     "static/js/3.7161c536.chunk.js": "/static/js/3.7161c536.chunk.js",
     "static/js/3.7161c536.chunk.js.map": "/static/js/3.7161c536.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.6f72f381.chunk.css.map": "/static/css/2.6f72f381.chunk.css.map",
     "static/css/main.6671bb88.chunk.css.map": "/static/css/main.6671bb88.chunk.css.map",
-    "static/js/2.09c3a7fb.chunk.js.LICENSE.txt": "/static/js/2.09c3a7fb.chunk.js.LICENSE.txt",
+    "static/js/2.3ad2e016.chunk.js.LICENSE.txt": "/static/js/2.3ad2e016.chunk.js.LICENSE.txt",
     "static/media/cookies.e98aa967.jpg": "/static/media/cookies.e98aa967.jpg",
     "static/media/keyboard.d6244bb1.jpg": "/static/media/keyboard.d6244bb1.jpg",
     "static/media/index.css": "/static/media/literata-vietnamese-400-normal.3a24f30c.woff2",
@@ -22,8 +22,8 @@
   "entrypoints": [
     "static/js/runtime-main.10f046dd.js",
     "static/css/2.6f72f381.chunk.css",
-    "static/js/2.09c3a7fb.chunk.js",
+    "static/js/2.3ad2e016.chunk.js",
     "static/css/main.6671bb88.chunk.css",
-    "static/js/main.66bcbdac.chunk.js"
+    "static/js/main.94d8c562.chunk.js"
   ]
 }
