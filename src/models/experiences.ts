@@ -10,15 +10,24 @@ export default interface Experience {
 
 export const experiences: Experience[] = [
   {
+    title: "Software Engineer",
+    employer: "Atlassian",
+    companyLink: "https://www.atlassian.com/",
+    startDate: "December 2022",
+    endDate: "present",
+    location: "Ottawa, ON",
+    responsibilities: ``
+  },
+  {
     title: "Senior Software Development Consultant",
     employer: "Reverso",
     companyLink: "https://www.reverso.net",
     startDate: "July 2022",
-    endDate: "present",
+    endDate: "September 2022",
     location: "Ottawa, ON",
     responsibilities: `
     <ul>
-      <li>Using test-driven development to develop features for a facade between a .NET Framework RESTful back-end and text correction engines.</li>
+      <li>Utilized test-driven development to develop features for a facade between a .NET Framework RESTful back-end and text correction engines.</li>
       <li>Bugfixes for front-end using Razor pages.</li>
     </ul>
     `
