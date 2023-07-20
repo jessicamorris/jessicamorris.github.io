@@ -43,7 +43,7 @@ export default function AppFooter(): JSX.Element {
         <Toolbar className={classes.toolbar}>
           <Grid container>
             <Grid item xs={12} sm>
-              <Typography variant="body1">© 2022 Jessica D. Morris</Typography>
+              <Typography variant="body1">© 2023 Jessica D. Morris</Typography>
             </Grid>
             <Grid item xs={12} sm className={classes.hosted}>
               <Typography variant="body1">

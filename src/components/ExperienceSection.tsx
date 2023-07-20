@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+// Scroller
+import { Element as ScrollElement, scroller, animateScroll } from "react-scroll";
+
 // HTML parser
 import parse, { HTMLReactParserOptions } from "html-react-parser";
 import { Element, DataNode } from "domhandler/lib/node";
@@ -110,6 +113,7 @@ export default function ExperienceSection(): JSX.Element {
               {t("experience.title")}
             </Typography>
           </Grid>
+          <ScrollElement name="experiencesTop" />
           <Grid item sm={12} md={8}>
             {experiences
               .slice(0, showMore ? experiences.length : 5)
@@ -137,7 +141,18 @@ export default function ExperienceSection(): JSX.Element {
                 color="secondary"
                 disableElevation
                 fullWidth
-                onClick={() => setShowMore(!showMore)}
+                onClick={() => {
+                  // Scroll up if going from more to less
+                  if (showMore) {
+                    scroller.scrollTo("experiencesTop", {
+                      duration: 1000,
+                      delay: 0,
+                      offset: -128,
+                      smooth: true
+                    });
+                  }
+                  setShowMore(!showMore);
+                }}
               >
                 Show {showMore ? "Less" : "More"}
               </Button>

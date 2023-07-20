@@ -40,19 +40,19 @@ export const skills: Skill[] = [
   },
   {
     name: "Cloud Platforms",
-    description: "Microsoft Azure, AWS",
+    description: "AWS, Microsoft Azure",
     category: SkillCategory.Infrastructure,
     icon: CloudIcon
   },
   {
     name: "React",
-    description: "Material UI, ag-grid, a11y, redux",
+    description: "Material UI, Cypress, ag-grid, redux",
     category: SkillCategory.Programming,
     icon: ReactLogo
   },
   {
     name: "Databases",
-    description: "MongoDB, SQL (SQLite, Oracle), Neo4j",
+    description: "MongoDB, SQL (Postgres, SQLite, Oracle), Neo4j",
     category: SkillCategory.Infrastructure,
     icon: DatabasesIcon
   },
@@ -82,7 +82,7 @@ export const skills: Skill[] = [
   },
   {
     name: "Java",
-    description: "Spring Boot, JUnit, Maven",
+    description: "Spring Boot, JPA/Hibernate, JUnit",
     category: SkillCategory.Programming,
     icon: JavaLogo
   },

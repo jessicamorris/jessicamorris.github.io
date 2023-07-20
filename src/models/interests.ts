@@ -38,8 +38,8 @@ export const interests: Interest[] = [
   {
     name: "Baking",
     description: [
-      "I've been baking since I was a teenager, but I wasn't actively honing the craft until the start of the COVID-19 pandemic. Now I'm hoping you'll see me on the Great Canadian Baking Show one day!",
-      "Pictured are my vegan chocolate chunk cookies, which taste as good as they look."
+      "I've been baking since I was a teenager, but I wasn't actively honing the craft until the start of the COVID-19 pandemic. Now I'm hoping you'll see me on the Great Canadian Baking Show one day, but I have a lot of work to do on my presentation/prettifying skills.",
+      "Pictured are my vegan chocolate chunk cookies, which taste as good as they look. (The secret ingredient is sourdough starter!)"
     ],
     category: InterestCategory.Hobbies,
     imagePath: cookies
@@ -59,7 +59,7 @@ export const interests: Interest[] = [
     name: "Mechanical Keyboards",
     description: [
       "Everyone needs a weird niche hobby, right?",
-      "Mine is building custom computer keyboards! I enjoy playing with colour schemes, and experimenting with modifying the boards and switches. It's like grown-up Legos."
+      "Mine is building custom computer keyboards! I enjoy playing with colour schemes, and experimenting with modifying the boards and switches. I keep my most recent project on display in my Zoom background."
     ],
     category: InterestCategory.Hobbies,
     imagePath: keyboard
@@ -67,7 +67,7 @@ export const interests: Interest[] = [
   {
     name: "Animal Welfare",
     description: [
-      "I'm an animal person, and rescuing dogs has brought so much joy to my life. I'm hoping to start fostering palliative care dogs in Fall 2022."
+      "I'm an animal person, and rescuing dogs has brought so much joy to my life. I'm hoping to start fostering palliative care dogs in Fall 2023."
     ],
     category: InterestCategory.Causes,
     buttonLink: "https://embk.me/pepper566",

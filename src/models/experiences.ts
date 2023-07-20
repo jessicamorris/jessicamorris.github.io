@@ -10,13 +10,20 @@ export default interface Experience {
 
 export const experiences: Experience[] = [
   {
-    title: "Software Engineer",
+    title: "Software Engineer - Customer Support Technology",
     employer: "Atlassian",
     companyLink: "https://www.atlassian.com/",
     startDate: "December 2022",
     endDate: "present",
-    location: "Ottawa, ON",
-    responsibilities: ``
+    location: "(remote) Ottawa, ON",
+    responsibilities: `
+    <ul>
+      <li>Back-end development in Java with Spring & Spring Boot, Hibernate, GraphQL, and various tiers of caching (Caffeine, Redis) and data persistence (Postgres). Current topic of personal interest is software resilience.</li>
+      <li>Front-end development in React with Atlaskit elements, tests with Jest and Cypress.</li>
+      <li>Led a small rebranding project, which included representing the engineering team at stakeholder meetings, organizing and facilitating a Bug Bash to test the transition from old to new branding, and tasking the team to address bugs ahead of release day.</li>
+      <li>Driving improvements to team culture and engineering processes, such as leading Learning Hours on application security and monthly Developer Productivity reviews.</li>
+    </ul>
+    `
   },
   {
     title: "Senior Software Development Consultant",
