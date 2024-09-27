@@ -232,8 +232,8 @@ export default function ContactSection(): JSX.Element {
         <div className={classes.modal}>
           <Typography variant="h5">So, funny story...</Typography>
           <Typography variant="body2">
-            I haven't implemented the contact section! You can get a hold of me with the
-            email button under my profile picture.
+            This has been a TODO for years. In the meantime, you can get a hold of me
+            with the email button under my profile picture above.
           </Typography>
         </div>
       </Modal>

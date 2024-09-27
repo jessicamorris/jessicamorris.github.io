@@ -53,7 +53,7 @@ export const interests: Interest[] = [
     category: InterestCategory.Software,
     buttonLink: "https://cyber.gc.ca/en/events/geekweek-75",
     buttonIcon: EventNoteIcon,
-    buttonLabel: "GeekWeek Event Page"
+    buttonLabel: "GeekWeek 7.5 Event Page"
   },
   {
     name: "Mechanical Keyboards",
@@ -65,9 +65,9 @@ export const interests: Interest[] = [
     imagePath: keyboard
   },
   {
-    name: "Animal Welfare",
+    name: "Dog Rescues",
     description: [
-      "I'm an animal person, and rescuing dogs has brought so much joy to my life. I'm hoping to start fostering palliative care dogs in Fall 2023."
+      "I'm an animal person, and rescuing dogs has brought so much joy to my life. My puppy Stella is a rescue from Iqaluit, and is the only reason I get my 12,000 steps a day."
     ],
     category: InterestCategory.Causes,
     buttonLink: "https://embk.me/pepper566",

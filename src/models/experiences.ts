@@ -5,37 +5,67 @@ export default interface Experience {
   startDate: string;
   endDate: string;
   location: string;
-  responsibilities: string;
+  responsibilities: string; // TODO I really shouldn't be putting HTML here lmao
 }
 
 export const experiences: Experience[] = [
   {
-    title: "Software Engineer - Customer Support Technology",
+    title: "Software Engineering Associate - Post-Deployment Verification",
     employer: "Atlassian",
     companyLink: "https://www.atlassian.com/",
-    startDate: "December 2022",
+    startDate: "August 2024",
     endDate: "present",
     location: "(remote) Ottawa, ON",
     responsibilities: `
     <ul>
-      <li>Back-end development in Java with Spring & Spring Boot, Hibernate, GraphQL, and various tiers of caching (Caffeine, Redis) and data persistence (Postgres). Current topic of personal interest is software resilience.</li>
-      <li>Front-end development in React with Atlaskit elements, tests with Jest and Cypress.</li>
-      <li>Led a small rebranding project, which included representing the engineering team at stakeholder meetings, organizing and facilitating a Bug Bash to test the transition from old to new branding, and tasking the team to address bugs ahead of release day.</li>
-      <li>Driving improvements to team culture and engineering processes, such as leading Learning Hours on application security and monthly Developer Productivity reviews.</li>
+      <li>Working on a Golang service that orchestrates hundreds of Docker containers for running post-deployment verification tasks, such as heartbeat monitoring and frontend testing scripts.</li>
+      <li>Current project is decomposing the service's monorepo into independent polyrepos to speed up delivery, and enable Safe Release Management.</li>
+      <li>Built and maintain the pipeline for sending daily data snapshots to Atlassian's datalake. I've built Databricks dashboards for measuring adoption, and for tracking down out-of-date task configurations.</li>
     </ul>
     `
   },
   {
-    title: "Senior Software Development Consultant",
-    employer: "Reverso",
-    companyLink: "https://www.reverso.net",
-    startDate: "July 2022",
-    endDate: "September 2022",
-    location: "Ottawa, ON",
+    title: "Software Engineering Associate - Developer Productivity Services",
+    employer: "Atlassian",
+    companyLink: "https://www.atlassian.com/",
+    startDate: "November 2023",
+    endDate: "July 2024",
+    location: "(remote) Ottawa, ON",
     responsibilities: `
     <ul>
-      <li>Utilized test-driven development to develop features for a facade between a .NET Framework RESTful back-end and text correction engines.</li>
-      <li>Bugfixes for front-end using Razor pages.</li>
+      <li>Maintained and administered the company's SonarQube instance.</li>
+      <ul>
+        <li>Planned, tested, and rolled out two major upgrades with minimal downtime and zero data loss.</li>
+        <li>Automated resource management and configuration using Terraform and Ansible playbooks.</li>
+        <li>Communicating with hundreds of stakeholders about planned downtime and upcoming releases.</li>
+        <li>Writing documentation, such as rollout/rollback procedures, post-mortems for incidents, and blog posts announcing major changes.</li>
+      </ul>
+      <li>Collaborated across teams on a Node service for ingesting all Atlassian repository metadata and CI/CD configurations into the central datalake.</li>
+      <li>Worked on metrics and analysis for a new Managed Builds service for standardizing CI/CD practices at Atlassian. My major project was building an 80% accurate "eligibility checker" algorithm to assess how repositories could adopt Managed Builds.</li>
+      <li>Mentored the team's summer intern, which included:</li>
+      <ul>
+        <li>Planning a 3-month project, with allowances for being behind or ahead of schedule.</li>
+        <li>Holding weekly one-on-ones and being available for other assistance (unblocking, code reviews, reviewing presentations).</li>
+        <li>Ensuring they met their milestones for the Atlassian internship program.</li>
+        <li>At the end of their term, they delivered two bugfixes and two minor features.</li>
+      </ul>
+    </ul>
+    `
+  },
+  {
+    title: "Software Engineering Associate - Customer Support Technology",
+    employer: "Atlassian",
+    companyLink: "https://www.atlassian.com/",
+    startDate: "December 2022",
+    endDate: "October 2023",
+    location: "(remote) Ottawa, ON",
+    responsibilities: `
+    <ul>
+      <li>Back-end development in Java with Spring & Spring Boot, Hibernate, GraphQL, and various tiers of caching (Caffeine, Redis) and data persistence (Postgres).</li>
+      <li>Front-end development in React with Atlaskit elements, tests with Jest and Cypress.</li>
+      <li>Led a rebranding project, which included representing the engineering team at stakeholder meetings, organizing and facilitating a Bug Bash to test the transition from old to new branding, and tasking the team to address bugs ahead of release day.</li>
+      <li>Drove improvements to team culture and engineering processes, such as leading Learning Hours on application security and monthly Developer Productivity reviews.</li>
+      <li>Diagnosed performance issues in an event-driven feature using SignalFx (for AWS Cloudwatch and custom metrics) and pgAdmin (for database performance)</li>
     </ul>
     `
   },
